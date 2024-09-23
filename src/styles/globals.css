@@ -4,20 +4,30 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #25225A;
+  --primary: #25225A;
+  --secondary: #891717;
+  --tertiary: #EBC471;
+  --neutral: #9297B0;
+  --neutral-dark: #84899F;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+  @apply max-w-screen-lg mx-auto px-7;
 }
 
 @layer utilities {

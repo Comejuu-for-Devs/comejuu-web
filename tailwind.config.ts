@@ -11,7 +11,19 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+        neutral: "var(--neutral)",
+        "neutral-dark": "var(--neutral-dark)",
       },
+      fontFamily: {
+        "primary": ["var(--font-primary)"],
+        "secondary": ["var(--font-secondary)"],
+      },
+      screens: {
+        'xs': '480px'
+      }
     },
   },
   plugins: [],
