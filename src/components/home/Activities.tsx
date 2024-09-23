@@ -1,6 +1,7 @@
 import React from 'react'
 import { RiCircleFill } from 'react-icons/ri'
-import GhostLine from '../GhostLine'
+
+import GhostLine from '@/components/GhostLine'
 
 const Activities = () => {
   return (
