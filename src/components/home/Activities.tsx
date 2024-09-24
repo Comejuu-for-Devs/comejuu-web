@@ -2,10 +2,12 @@ import React from 'react'
 import { RiCircleFill } from 'react-icons/ri'
 
 import GhostLine from '@/components/GhostLine'
+import ActivityCard from '@/components/home/ActivityCard'
+import { activities } from '@/data'
 
 const Activities = () => {
   return (
-    <section className='py-20 bg-secondary'>
+    <section className='py-20 bg-secondary rounded-2xl'>
       <div className="container space-y-10">
         <div className="flex flex-col sm:flex-row justify-between gap-5">
           <div className="flex items-center gap-3">
@@ -18,7 +20,15 @@ const Activities = () => {
 
         <GhostLine styles='via-white/50' />
 
-        <div className=""></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+          {activities.map((activity, i) => (
+            <ActivityCard
+              key={i}
+              name={activity.name}
+              description={activity.description}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )
