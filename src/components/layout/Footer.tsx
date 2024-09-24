@@ -9,45 +9,35 @@ import logo from '@/assets/logo.png'
 const footerData = {
   products: [
     {
-      name: 'Graphyte',
-      url: 'https://graphyte.afordiazero.com',
+      name: 'About',
+      url: '/about',
       external: true,
     },
     {
-      name: 'Fyntrax',
-      url: 'https://fyntrax.com',
+      name: 'Careers',
+      url: '/careers',
       external: true,
     },
     {
-      name: 'Ryze Net',
-      url: 'https://theryze.net',
-      external: true,
-    },
-    {
-      name: 'Kladz',
-      url: 'https://kladz.vercel.app',
-      external: true,
-    },
-    {
-      name: 'K-Grid',
-      url: 'https://kgrid.vercel.app',
+      name: 'Team',
+      url: '/team',
       external: true,
     },
   ],
 
   company: [
     {
-      name: 'Projects',
+      name: 'How it works',
       url: '/projects',
       external: false,
     },
     {
-      name: 'Culture',
+      name: 'Partners',
       url: '/culture',
       external: false,
     },
     {
-      name: 'Careers',
+      name: 'Members',
       url: '/careers',
       external: false,
     },
@@ -83,13 +73,13 @@ const footerData = {
 
   contact: [
     {
-      name: 'info@afordiazero.com',
-      url: 'mailto:info@afordiazero.com',
+      name: 'info@comejuupremieracademy.ac.ke',
+      url: 'mailto:info@comejuupremieracademy.ac.ke',
       external: false,
     },
     {
-      name: '(+254) 711 383 990',
-      url: 'tel:+254-711-383-990',
+      name: '0800 123 456',
+      url: 'tel:0800 123 456',
       external: false,
     },
   ],
@@ -131,7 +121,7 @@ const FooterLinkGroup = ({ title, links }: FooterLinkGroupProps) => {
             url={link.url}
             external={link.external}
           />
-        ))}              
+        ))}
       </div>
     </div>
   )
@@ -157,57 +147,68 @@ const Footer = () => {
             <p className="text-gray-300 text-sm">
               Where vital academics meet a deep respect for childhood
             </p>
+
+            <div className="bg-gradient-w-border py-2 flex gap-4 w-max">
+              <Link
+                href='https://www.linkedin.com/company/afordia-zero'
+                className='text-gray-400 hover:text-white transition'
+                target="_blank"
+              >
+                <RiLinkedinLine />
+              </Link>
+
+              <Link
+                href='https://github.com/Afordia-Zero'
+                className='text-gray-400 hover:text-white transition'
+                target="_blank"
+              >
+                <PiGithubLogoDuotone />
+              </Link>
+
+              <Link
+                href='https://twitter.com/AfordiaZero'
+                className='text-gray-400 hover:text-white transition'
+                target="_blank"
+              >
+                <RiTwitterXLine />
+              </Link>
+            </div>
           </div>
 
-          <div className="flex gap-10 flex-wrap">
-            <FooterLinkGroup
-              title='Products'
-              links={footerData.products}
-            />
+          <div className="flex flex-col gap-10 flex-wrap">
+            <div className='flex gap-10'>
+              <FooterLinkGroup
+                title='Useful Links'
+                links={footerData.products}
+              />
+
+              <FooterLinkGroup
+                title='Resources'
+                links={footerData.company}
+              />
+            </div>
 
             <FooterLinkGroup
-              title='Company'
-              links={footerData.company}
-            />
-            
-            <FooterLinkGroup
-              title='Contact'
+              title='Contact Us'
               links={footerData.contact}
             />
           </div>
         </div>
-        
+
         {/* ********* BOTTOM ********* */}
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center justify-between relative pt-5
         border-t border-white/10">
           <p className="text-[12px] font-medium text-gray-500">
-            &copy; {new Date().getFullYear()} Afordia Zero. All rights reserved.
+            &copy; {new Date().getFullYear()} Comejuu Premier Academy. All Rights Reserved.
           </p>
 
           <div className="bg-gradient-w-border py-2 px-3 flex gap-4 w-max">
-            <Link
-              href='https://www.linkedin.com/company/afordia-zero'
-              className='text-gray-400 hover:text-white transition'
-              target="_blank"
-            >
-              <RiLinkedinLine />
-            </Link>
-
-            <Link
-              href='https://github.com/Afordia-Zero'
-              className='text-gray-400 hover:text-white transition'
-              target="_blank"
-            >
-              <PiGithubLogoDuotone />
-            </Link>
-
-            <Link
-              href='https://twitter.com/AfordiaZero'
-              className='text-gray-400 hover:text-white transition'
-              target="_blank"
-            >
-              <RiTwitterXLine />
-            </Link>
+            <p
+              className='text-[12px] text-gray-400 hover:text-white transition'
+            >Privacy Policy</p>
+            <p
+              className='text-[12px] text-gray-400 hover:text-white transition'
+            >legal</p>
           </div>
         </div>
       </div>
