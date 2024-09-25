@@ -27,10 +27,10 @@ const Testimonials = () => {
           text-primary">
           What parents are saying about us
         </h1>
-        <GhostLine />
-        <div className='flex flex-col sm:flex-row gap-5'>
+        <GhostLine/>
+        <div className='flex gap-5'>
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role} />
+            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role}/>
           ))}
         </div>
       </div>

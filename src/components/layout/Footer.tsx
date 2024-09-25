@@ -7,69 +7,34 @@ import { RiLinkedinLine, RiTwitterXLine } from 'react-icons/ri'
 import logo from '@/assets/logo.png'
 
 const footerData = {
-  products: [
+  usefulLinks: [
     {
-      name: 'About',
+      name: 'Home',
+      url: '/',
+      external: false,
+    },
+    {
+      name: 'About Comejuu',
       url: '/about',
-      external: true,
-    },
-    {
-      name: 'Careers',
-      url: '/careers',
-      external: true,
-    },
-    {
-      name: 'Team',
-      url: '/team',
-      external: true,
-    },
-  ],
-
-  company: [
-    {
-      name: 'How it works',
-      url: '/projects',
       external: false,
     },
     {
-      name: 'Partners',
-      url: '/culture',
+      name: 'Curriculum',
+      url: '/curriculum',
       external: false,
     },
     {
-      name: 'Members',
-      url: '/careers',
+      name: 'Admissions',
+      url: '/admissions',
       external: false,
     },
     {
-      name: 'Blog',
-      url: '/blog',
+      name: 'Media room',
+      url: '/mediaroom',
       external: false,
     },
   ],
 
-  resources: [
-    {
-      name: 'blog',
-      url: '/',
-      external: false,
-    },
-    {
-      name: 'customers',
-      url: '/',
-      external: false,
-    },
-    {
-      name: 'community',
-      url: '/',
-      external: false,
-    },
-    {
-      name: 'events',
-      url: '/',
-      external: false,
-    },
-  ],
 
   contact: [
     {
@@ -179,12 +144,7 @@ const Footer = () => {
             <div className='flex gap-10'>
               <FooterLinkGroup
                 title='Useful Links'
-                links={footerData.products}
-              />
-
-              <FooterLinkGroup
-                title='Resources'
-                links={footerData.company}
+                links={footerData.usefulLinks}
               />
             </div>
 

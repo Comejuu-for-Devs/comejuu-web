@@ -8,15 +8,19 @@ import Button from '@/components/Button'
 
 const Hero = () => {
   return (
-    <section className='relative min-h-screen w-full pb-20'>
+    <section className='min-h-screen w-full page'>
       <Dots />
 
       <div className="space-y-20">
-        <div className="relative container pt-36">
-          <h1 className="font-secondary text-5xl w-1/2 font-bold tracking-tight
-          ">
+        <div className="relative container py-10 flex flex-col md:flex-row md:justify-between md:items-end gap-10">
+          <h1 className="font-secondary text-6xl w-full md:w-3/4 md:text-8xl font-black tracking-tighter">
             Where dreams spread their wings
           </h1>
+
+          <Button className='md:ml-auto w-max h-max'>
+            Enrol now
+            <RiArrowRightLine />
+          </Button>
         </div>
 
         <div className="mx-0 lg:mx-16">

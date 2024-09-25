@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface Props {
-  content: string,
-  author: string,
+type TestimonialProps = {
+  content: string
+  author: string
   role: string
 }
 
-function TestimonialCard({ content, author, role }: Props) {
+const TestimonialCard = ({ content, author, role }: TestimonialProps) => {
   return (
     <div className='w-[400px]'>
       <p className='text-base text-primary mb-5 w-full'>{content}</p>
