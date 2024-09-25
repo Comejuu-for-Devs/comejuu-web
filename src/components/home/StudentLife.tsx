@@ -30,8 +30,8 @@ const StudentLife = () => {
           Student life at Comejuu
         </h1>
         <div className='flex gap-5'>
-          {events.map(event => (
-            <StudentLifeCard title={event.title} date={event.date} link={event.link} linkTitle='Discover More' />
+          {events.map((event, i) => (
+            <StudentLifeCard key={i} title={event.title} date={event.date} link={event.link} linkTitle='Discover More' />
           ))}
         </div>
       </div>
