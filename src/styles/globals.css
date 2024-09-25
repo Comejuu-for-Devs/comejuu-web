@@ -31,7 +31,7 @@ body {
 }
 
 .page {
-  @apply pt-36 pb-20;
+  @apply pt-36 pb-20 relative;
 }
 
 @layer utilities {
