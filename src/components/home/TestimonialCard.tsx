@@ -1,6 +1,12 @@
 import React from 'react'
 
-function TestimonialCard({ content, author, role }) {
+type TestimonialProps = {
+  content: string
+  author: string
+  role: string
+}
+
+const TestimonialCard = ({ content, author, role }: TestimonialProps) => {
   return (
     <div className='w-[400px]'>
       <p className='text-xl text-primary mb-5 w-full'>{content}</p>
