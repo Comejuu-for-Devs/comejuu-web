@@ -1,6 +1,6 @@
 import React from 'react'
-import  TestimonialCard from './TestimonialCard'
-import  GhostLine from "../GhostLine"
+import TestimonialCard from './TestimonialCard'
+import GhostLine from "../GhostLine"
 
 const testimonials = [
   {
@@ -29,8 +29,8 @@ const Testimonials = () => {
         </h1>
         <GhostLine/>
         <div className='flex gap-5'>
-          {testimonials.map(t => (
-            <TestimonialCard content={t.content} author={t.author} role={t.role}/>
+          {testimonials.map((t, i) => (
+            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role}/>
           ))}
         </div>
       </div>
