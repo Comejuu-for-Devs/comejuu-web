@@ -1,5 +1,5 @@
-import Dots from '@/components/layout/Dots'
 import React from 'react'
+import Dots from '@/components/layout/Dots'
 
 const Admissions = () => {
   return (
