@@ -29,7 +29,7 @@ const StudentLife = () => {
           text-white">
           Student life at Comejuu
         </h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        <div className=' w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-2'>
           {events.map((event, i) => (
             <StudentLifeCard key={i} title={event.title} date={event.date} link={event.link} linkTitle='Discover More' />
           ))}
