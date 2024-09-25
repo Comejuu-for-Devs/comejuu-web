@@ -11,17 +11,17 @@ const footerData = {
     {
       name: 'About',
       url: '/about',
-      external: true,
+      external: false,
     },
     {
       name: 'Careers',
       url: '/careers',
-      external: true,
+      external: false,
     },
     {
       name: 'Team',
       url: '/team',
-      external: true,
+      external: false,
     },
   ],
 
