@@ -25,11 +25,11 @@ const StudentLife = () => {
   return (
     <section className='bg-primary rounded-2xl py-24 w-full'>
       <div className="container space-y-14">
-        <h1 className="font-secondary text-5xl w-1/2 font-bold tracking-tight
+        <h1 className="font-secondary text-5xl font-bold tracking-tight
           text-white">
           Student life at Comejuu
         </h1>
-        <div className='flex gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
           {events.map((event, i) => (
             <StudentLifeCard key={i} title={event.title} date={event.date} link={event.link} linkTitle='Discover More' />
           ))}

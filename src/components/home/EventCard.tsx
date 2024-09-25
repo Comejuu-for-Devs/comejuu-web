@@ -11,7 +11,7 @@ type EventCardProps = {
 const EventCard: React.FC<EventCardProps> = ({ title, date, time }) => {
   const { day, monthName } = getDate(date)
   return (
-    <div className='p-2 border border-secondary/15 rounded-xl w-[285px] gap-5 flex flex-col'>
+    <div className='p-2 border border-secondary/15 rounded-xl w-full gap-5 flex flex-col'>
       <div className="bg-secondary text-white p-3 w-14 min-w-12 rounded-2xl">
         <p className="text-lg font-semibold">{day}</p>
         <p className="text-sm uppercase">{monthName}</p>
