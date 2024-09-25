@@ -30,6 +30,10 @@ body {
   @apply max-w-screen-lg mx-auto px-7;
 }
 
+.page {
+  @apply pt-36 pb-20;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
