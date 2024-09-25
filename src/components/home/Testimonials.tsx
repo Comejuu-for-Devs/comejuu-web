@@ -23,14 +23,14 @@ const Testimonials = () => {
   return (
     <section className='rounded-2xl py-24 w-full'>
       <div className="container space-y-14">
-        <h1 className="font-secondary text-5xl w-1/2 font-bold tracking-tight
+        <h1 className="font-secondary text-5xl  font-bold tracking-tight
           text-primary">
           What parents are saying about us
         </h1>
-        <GhostLine/>
-        <div className='flex gap-5'>
+        <GhostLine />
+        <div className='flex gap-10 sm:gap-5 sm:flex-row flex-col'>
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role}/>
+            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role} />
           ))}
         </div>
       </div>
