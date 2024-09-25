@@ -1,21 +1,21 @@
 import React from 'react'
-import  TestimonialCard from './TestimonialCard'
-import  GhostLine from "../GhostLine"
+import TestimonialCard from './TestimonialCard'
+import GhostLine from "../GhostLine"
 
 const testimonials = [
   {
     content: "The school has been an incredible place for our child to grow academically and personally. We couldn’t be happier!",
-    author : "Jack Daniels",
+    author: "Jack Daniels",
     role: "Parent",
   },
   {
     content: "The dedication of the teachers and staff is unmatched. Our child feels supported and motivated every day.",
-    author : "Jack Daniels",
+    author: "Jack Daniels",
     role: "Parent",
   },
   {
     content: "The balance between academics and extracurriculars has really helped our child discover new passions and talents.",
-    author : "Jack Daniels",
+    author: "Jack Daniels",
     role: "Parent",
   }
 ]
@@ -27,10 +27,10 @@ const Testimonials = () => {
           text-primary">
           What parents are saying about us
         </h1>
-        <GhostLine/>
+        <GhostLine />
         <div className='flex gap-5'>
-          {testimonials.map(t => (
-            <TestimonialCard content={t.content} author={t.author} role={t.role}/>
+          {testimonials.map((t, i) => (
+            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role} />
           ))}
         </div>
       </div>
