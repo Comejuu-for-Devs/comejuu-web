@@ -90,7 +90,7 @@ const About = () => {
                   />
 
                   <p className="text-white font-medium">John Doe</p>
-                  <p className="text-sm text-tertiary">School Principal</p>
+                  <p className="text-sm text-tertiary">School Director</p>
                 </div>
               </div>
               
