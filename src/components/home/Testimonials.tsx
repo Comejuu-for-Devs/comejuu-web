@@ -1,6 +1,6 @@
 import React from 'react'
-import TestimonialCard from './TestimonialCard'
-import GhostLine from "../GhostLine"
+import TestimonialCard from '@/components/home/TestimonialCard'
+import GhostLine from "@/components/GhostLine"
 
 const testimonials = [
   {
