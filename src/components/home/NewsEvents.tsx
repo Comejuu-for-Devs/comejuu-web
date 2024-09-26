@@ -22,11 +22,6 @@ const news = [
     title: "Title of News Item",
     content: "Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year."
   },
-  {
-    img: "",
-    title: "Title of News Item",
-    content: "Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year."
-  },
 ]
 
 const NewsEvents = () => {
@@ -40,7 +35,9 @@ const NewsEvents = () => {
 
         <div className="">
           <h5 className="text-primary text-base font-bold">Upcoming events</h5>
+
           <hr className='my-5' />
+
           <div className="w-full overflow-x-auto pb-5">
             <div className="flex gap-3 w-max">
               {events.map((event, i) => (
@@ -54,23 +51,28 @@ const NewsEvents = () => {
             </div>
           </div>
         </div>
+
         <div className="">
           <h5 className="text-primary text-base font-bold">Latest News</h5>
-          <hr className='my-5' />
-          <div className='flex gap-4'>
 
-            <div className='flex flex-col gap-5'>
+          <hr className='my-5' />
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <div className='flex flex-col gap-5 w-full'>
               <Image
                 width={1920}
                 height={1280}
                 src='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 alt=''
-                className='w-[600px] h-[300px] object-cover rounded-2xl' />
-              <div className='w-[426px] space-y-4'>
-                <p className='text-black font-bold text-2xl'>Title of News Items</p>
-                <p className='text-xs text-neutral-dark'> Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year.</p>
+                className='w-full h-[300px] object-cover rounded-xl'
+              />
+
+              <div className='w-full space-y-3'>
+                <p className='text-black font-bold text-xl sm:text-2xl'>Title of News Items</p>
+                <p className='text-sm text-neutral-dark'> Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year.</p>
               </div>
             </div>
+
             <div className="w-full pb-5">
               <div className="flex w-full gap-5 flex-col">
                 {news.map((n, i) => (
@@ -84,7 +86,6 @@ const NewsEvents = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   )

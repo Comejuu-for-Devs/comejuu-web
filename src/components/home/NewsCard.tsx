@@ -14,11 +14,12 @@ const NewsCard = ({ title, content }: NewsCardProps) => {
         height={1280}
         src='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         alt=''
-        className='w-[150px] h-[120px] object-cover rounded-2xl'
+        className='w-[150px] h-[120px] object-cover rounded-lg'
       />
-      <div className='w-[426px] space-y-4'>
-        <p className='text-black font-bold text-xl'>{title}</p>
-        <p className='text-xs text-neutral-dark'>{content}</p>
+
+      <div className='w-full space-y-2'>
+        <p className='text-black font-bold text-lg sm:text-xl'>{title}</p>
+        <p className='text-sm text-neutral-dark line-clamp-3'>{content}</p>
       </div>
     </div>
   )

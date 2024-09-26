@@ -23,15 +23,19 @@ const Testimonials = () => {
   return (
     <section className='rounded-2xl py-24 w-full'>
       <div className="container space-y-14">
-        <h1 className="font-secondary text-5xl w-1/2 font-bold tracking-tight
+        <h1 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
           text-primary">
           What parents are saying about us
         </h1>
+
         <GhostLine/>
-        <div className='flex gap-5'>
-          {testimonials.map((t, i) => (
-            <TestimonialCard key={i} content={t.content} author={t.author} role={t.role}/>
-          ))}
+        
+        <div className="overflow-x-auto pb-10">
+          <div className='flex gap-5 w-max'>
+            {testimonials.map((t, i) => (
+              <TestimonialCard key={i} content={t.content} author={t.author} role={t.role}/>
+            ))}
+          </div>
         </div>
       </div>
     </section>
