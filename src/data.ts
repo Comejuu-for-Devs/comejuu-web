@@ -43,3 +43,30 @@ export const events = [
     date: '22 September 2024',
   },
 ]
+
+export const values = [
+  {
+    name: 'Excellence',
+    description: 'At Comejuu Premier Academy, we strive for excellence in everything we do, inspiring our students to reach their full potential and aim high.'
+  },
+  {
+    name: 'Integrity',
+    description: 'Honesty and integrity are at the heart of our community, guiding our students to be trustworthy and responsible individuals'
+  },
+  {
+    name: 'Respect',
+    description: 'We foster a culture of respect for all, where everyone feels valued and appreciated, creating a harmonious learning environment'
+  },
+  {
+    name: 'Compassion',
+    description: 'We encourage our students to be kind and caring, developing empathy and understanding for others.'
+  },
+  {
+    name: 'Responsibility',
+    description: 'We empower our students to take ownership of their actions and decisions, fostering a sense of'
+  },
+  {
+    name: 'Curiosity',
+    description: 'We nurture a love for learning and encourage our students to be inquisitive and explore the world around them with an open mind.'
+  },
+]
