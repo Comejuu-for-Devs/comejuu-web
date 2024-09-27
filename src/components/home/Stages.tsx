@@ -1,5 +1,6 @@
 import React from 'react'
-import StageCard from './StageCard'
+
+import StageCard from '@/components/home/StageCard'
 
 const Stages = () => {
   return (
