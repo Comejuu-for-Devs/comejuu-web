@@ -26,6 +26,7 @@ const Menu: React.FC<MenuProps> = ({ open, setOpen }) => {
         <Button
           size='icon'
           className='bg-white text-primary text-lg absolute top-2 right-2'
+          onClick={() => setOpen(false)}
         >
           <RiCloseLine />
         </Button>
