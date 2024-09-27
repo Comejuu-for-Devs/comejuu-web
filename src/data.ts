@@ -70,3 +70,48 @@ export const values = [
     description: 'We nurture a love for learning and encourage our students to be inquisitive and explore the world around them with an open mind.'
   },
 ]
+
+export const admissionSteps = [
+  {
+    stepNo: 1,
+    title: 'Apply',
+    description: `
+      Complete the online application form and submit all required documents, including previous school records and a personal statement.
+    `,
+  },
+  {
+    stepNo: 2,
+    title: 'Entrance Assessment',
+    description: `
+      Schedule and complete the required entrance assessment to evaluate academic readiness.
+    `,
+  },
+  {
+    stepNo: 3,
+    title: 'Interview (For Junior High Applicants)',
+    description: `
+      Junior high applicants may be invited for an interview with the admissions team or school director.
+    `,
+  },
+  {
+    stepNo: 4,
+    title: 'Decision Notification',
+    description: `
+      After reviewing the application and assessment, the admissions office will notify you of the decision.
+    `,
+  },
+  {
+    stepNo: 5,
+    title: 'Enrollment & Registration',
+    description: `
+      Upon acceptance, complete the enrollment form and submit any additional required documentation. Secure your child’s spot by paying the registration fee.
+    `,
+  },
+  {
+    stepNo: 6,
+    title: 'Orientation & Welcome',
+    description: `
+      Attend the new student orientation to help your child transition smoothly into the school community.
+    `,
+  },
+]
