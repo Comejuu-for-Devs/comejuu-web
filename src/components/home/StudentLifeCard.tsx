@@ -10,7 +10,7 @@ interface Props {
   link: string
 }
 
-export const StudentLifeCard = ({ title, date, linkTitle, link }: Props) => {
+export const StudentLifeCard = ({ title, linkTitle, link }: Props) => {
   return (
     <div className='w-[275px] sm:w-[388px] h-[524px] text-white space-y-6 rounded-2xl'>
       <Image
@@ -23,7 +23,7 @@ export const StudentLifeCard = ({ title, date, linkTitle, link }: Props) => {
 
       <div>
         <h1 className='text-lg font-semibold'>{title}</h1>
-        <p className='text-sm text-[#ccc] font-normal'>{date}</p>
+        {/* <p className='text-sm text-[#ccc] font-normal'>{date}</p> */}
       </div>
 
       <div className='text-sm font-semibold text-tertiary flex gap-3 items-center'>

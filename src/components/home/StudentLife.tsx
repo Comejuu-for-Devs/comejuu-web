@@ -3,19 +3,19 @@ import { StudentLifeCard } from './StudentLifeCard'
 
 const events = [
   {
-    title: "Football day",
+    title: "Sports & Physical Education",
     date: "April, 1 2024",
     img: "",
     link: ""
   },
   {
-    title: "Computer lab adventures",
+    title: "Talent Development",
     date: "April, 20 2024",
     img: "",
     link: "",
   },
   {
-    title: "Camping 101",
+    title: "Pastoral Care",
     date: "May, 6 2024",
     img: "",
     link: ""
@@ -25,10 +25,10 @@ const StudentLife = () => {
   return (
     <section className='bg-primary rounded-2xl py-20 w-full'>
       <div className="container space-y-10">
-        <h1 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
+        <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
           text-white">
           Student life at Comejuu
-        </h1>
+        </h2>
 
         <div className="overflow-x-auto">
           <div className='flex gap-5 w-max'>

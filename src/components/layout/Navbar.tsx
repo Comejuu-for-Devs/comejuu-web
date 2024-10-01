@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { RiMenu2Line } from 'react-icons/ri'
+import { RiMenu2Line, RiSearch2Line } from 'react-icons/ri'
 
 import Button from '@/components/Button'
 import Menu from '@/components/layout/Menu'
@@ -41,13 +41,22 @@ const Navbar = () => {
             <Navlink name='Media Room' url='/mediaroom' />
           </div>
 
-          <Button
-            size='icon'
-            className='justify-center text-base'
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <RiMenu2Line />
-          </Button>
+          <div className="flex items-center gap-1">
+            <Button
+              size='icon'
+              className='justify-center text-base border border-white/5'
+            >
+              <RiSearch2Line />
+            </Button>
+
+            <Button
+              size='icon'
+              className='justify-center text-base border border-white/5'
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <RiMenu2Line />
+            </Button>
+          </div>
         </div>
       </nav>
 

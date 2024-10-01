@@ -12,14 +12,14 @@ const Hero = () => {
     <section className='min-h-screen w-full page'>
       <Dots />
 
-      <div className="space-y-20">
+      <div className="space-y-20 bg-primary rounded-3xl pb-20 h-full">
         <div className="relative container py-10 flex flex-col md:flex-row md:justify-between md:items-end gap-10">
-          <h1 className="font-secondary text-6xl w-full md:w-3/4 md:text-8xl font-black tracking-tighter">
+          <h1 className="font-secondary text-6xl w-full md:w-3/4 md:text-8xl font-black tracking-tighter text-white">
             Where dreams spread their wings
           </h1>
 
-          <Button className='md:ml-auto w-max h-max'>
-            Enrol now
+          <Button className='md:ml-auto w-max h-max bg-white text-primary'>
+            Apply now
             <RiArrowRightLine />
           </Button>
         </div>
@@ -36,17 +36,24 @@ const Hero = () => {
               className='object-cover rounded-xl'
             />
 
-            <p className="text-gray-500 text-sm md:text-base">
-              Comejuu Premier Academy fosters purposeful inquiry-based and social-emotional learning for children in preschool through grade 8 in a joyful, connected community. We empower all students as curious, confident, and resilient leaders, thinkers, and creators. Since our founding in 1942, our impact has been evident in the unique accomplishments and meaningful contributions of our students, graduates, and educators.
+            <p className="text-gray-200 text-sm md:text-base">
+              Comejuu Premier Academy was started in 2001, and for more than 20 years, we have
+              been providing a nurturing environment where your child can learn, grow, and thrive - and the
+              results speak for themselves. We nurture not just academic success, but also the character
+              and values that will shape your child&apos;s future. We believe in holistic development, guiding
+              every child to reach their full potential and embrace the challenges of the modern world.
             </p>
           </div>
 
           <GhostLine />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <h3 className="text-4xl font-secondary font-bold">Welcome to Comejuu Premier Academy</h3>
+            <div className="space-y-5">
+              <h3 className="text-4xl font-secondary font-bold text-white">Karibu Comejuu Premier Academy</h3>
+              <p className="text-sm text-gray-300">A Citadel of Excellence for Pre-School, Primary and Junior Secondary</p>
+            </div>
             
-            <Button className='md:ml-auto w-max'>
+            <Button className='md:ml-auto w-max bg-white text-primary'>
               Enrol now
               <RiArrowRightLine />
             </Button>

@@ -45,11 +45,11 @@ const Menu: React.FC<MenuProps> = ({ open, setOpen }) => {
           </div>
 
           <div className="flex flex-col gap-3" onClick={() => setOpen(false)}>
-            <Navlink name='Home' url='/' classNames='text-gray-100 hover:text-tertiary border-none p-0' />
-            <Navlink name='About Comejuu' url='/about' classNames='text-gray-100 hover:text-tertiary border-none p-0' />
-            <Navlink name='Curriculum' url='/curriculum' classNames='text-gray-100 hover:text-tertiary border-none p-0' />
-            <Navlink name='Admissions' url='/admissions' classNames='text-gray-100 hover:text-tertiary border-none p-0' />
-            <Navlink name='Media Room' url='/mediaroom' classNames='text-gray-100 hover:text-tertiary border-none p-0' />
+            <Navlink name='Home' url='/' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
+            <Navlink name='About Comejuu' url='/about' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
+            <Navlink name='Curriculum' url='/curriculum' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
+            <Navlink name='Admissions' url='/admissions' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
+            <Navlink name='Media Room' url='/mediaroom' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
           </div>
         </div>
       </div>
