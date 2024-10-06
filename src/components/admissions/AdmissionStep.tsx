@@ -14,11 +14,11 @@ const AdmissionStep: React.FC<AdmissionStepProps> = ({
   return (
     <div className='space-y-5'>
       <span className="text-6xl sm:text-7xl text-tertiary font-bold">{stepNo}</span>
-      <h5 className="text-lg sm:text-xl font-bold font-secondary text-primary">
+      <h5 className="text-lg sm:text-xl font-bold font-secondary text-white">
         {title}
       </h5>
 
-      <p className="text-sm sm:text-base text-gray-500">{description}</p>
+      <p className="text-sm sm:text-base text-gray-400">{description}</p>
     </div>
   )
 }

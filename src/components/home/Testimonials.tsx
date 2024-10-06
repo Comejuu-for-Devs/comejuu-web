@@ -21,14 +21,14 @@ const testimonials = [
 ]
 const Testimonials = () => {
   return (
-    <section className='rounded-2xl py-24 w-full'>
+    <section className='bg-primary rounded-2xl py-24 w-full'>
       <div className="container space-y-14">
         <h1 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
-          text-primary">
-          What parents are saying about us
+        text-white">
+          Parents are happy, so will you be
         </h1>
 
-        <GhostLine/>
+        <GhostLine styles='via-white/30' />
         
         <div className="overflow-x-auto pb-10">
           <div className='flex gap-5 w-max'>

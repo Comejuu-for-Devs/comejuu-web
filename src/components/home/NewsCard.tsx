@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type NewsCardProps = {
@@ -17,10 +18,15 @@ const NewsCard = ({ title, content }: NewsCardProps) => {
         className='w-[150px] h-[120px] object-cover rounded-lg'
       />
 
-      <div className='w-full space-y-2'>
-        <p className='text-black font-bold text-lg sm:text-xl'>{title}</p>
-        <p className='text-sm text-neutral-dark line-clamp-3'>{content}</p>
+      <div className='w-full space-y-3'>
+        <div className="space-y-2">
+          <p className='text-black font-bold text-lg sm:text-xl'>{title}</p>
+          <p className='text-sm text-neutral-dark line-clamp-3'>{content}</p>
+        </div>
+        <Link href='/' className='text-sm underline flex items-center text-sky-500'>Read More</Link>
       </div>
+
+      
     </div>
   )
 }

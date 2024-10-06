@@ -23,7 +23,7 @@ const events = [
 ]
 const StudentLife = () => {
   return (
-    <section className='bg-primary rounded-2xl py-20 w-full'>
+    <section className='bg-secondary rounded-2xl py-20 w-full'>
       <div className="container space-y-10">
         <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
           text-white">
@@ -33,7 +33,13 @@ const StudentLife = () => {
         <div className="overflow-x-auto">
           <div className='flex gap-5 w-max'>
             {events.map((event, i) => (
-              <StudentLifeCard key={i} title={event.title} date={event.date} link={event.link} linkTitle='Discover More' />
+              <StudentLifeCard
+                key={i}
+                title={event.title}
+                date={event.date}
+                link={event.link}
+                linkTitle='Learn More'
+              />
             ))}
           </div>
         </div>

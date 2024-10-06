@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { RiArrowRightLine } from 'react-icons/ri'
 
-import Dots from '@/components/layout/Dots'
+// import Dots from '@/components/layout/Dots'
 import GhostLine from '@/components/GhostLine'
 import Button from '@/components/Button'
 import ValueCarousel from '@/components/home/ValueCarousel'
@@ -10,8 +10,6 @@ import ValueCarousel from '@/components/home/ValueCarousel'
 const Hero = () => {
   return (
     <section className='min-h-screen w-full page'>
-      <Dots />
-
       <div className="space-y-20 bg-primary rounded-3xl pb-20 h-full">
         <div className="relative container py-10 flex flex-col md:flex-row md:justify-between md:items-end gap-10">
           <h1 className="font-secondary text-6xl w-full md:w-3/4 md:text-8xl font-black tracking-tighter text-white">
