@@ -1,9 +1,9 @@
 import React from 'react'
+import Image from 'next/image'
 import { RiCircleFill } from 'react-icons/ri'
 
-import NewsCard from './NewsCard'
-import Image from 'next/image'
-import Button from '../Button'
+import Button from '@/components/Button'
+import NewsCard from '@/components/home/NewsCard'
 
 const news = [
   {

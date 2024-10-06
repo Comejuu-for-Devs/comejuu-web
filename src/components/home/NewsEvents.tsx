@@ -1,28 +1,8 @@
 import React from 'react'
 import { RiCircleFill } from 'react-icons/ri'
 
-import { events } from '@/data'
 import EventCard from '@/components/home/EventCard'
-import NewsCard from './NewsCard'
-import Image from 'next/image'
-
-const news = [
-  {
-    img: "",
-    title: "Title of News Item",
-    content: "Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year."
-  },
-  {
-    img: "",
-    title: "Title of News Item",
-    content: "Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year."
-  },
-  {
-    img: "",
-    title: "Title of News Item",
-    content: "Fifth-graders honed their communication, problem-solving, and team-building skills through collaborative outdoor activities during a visit to The EDGE, located on George Mason University’s science and technology campus. The hands-on activities helped our students grow as a team as they prepare for Middle School next year."
-  },
-]
+import { events } from '@/data'
 
 const NewsEvents = () => {
   return (
