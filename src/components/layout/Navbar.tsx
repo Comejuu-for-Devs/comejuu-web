@@ -39,6 +39,7 @@ const Navbar = () => {
             <Navlink name='Curriculum' url='/curriculum' />
             <Navlink name='Admissions' url='/admissions' />
             <Navlink name='Media Room' url='/mediaroom' />
+            <Navlink name='Contact' url='/contact' />
           </div>
 
           <div className="flex items-center gap-1">

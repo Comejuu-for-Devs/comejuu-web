@@ -50,6 +50,7 @@ const Menu: React.FC<MenuProps> = ({ open, setOpen }) => {
             <Navlink name='Curriculum' url='/curriculum' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
             <Navlink name='Admissions' url='/admissions' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
             <Navlink name='Media Room' url='/mediaroom' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
+            <Navlink name='Contact' url='/contact' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
           </div>
         </div>
       </div>
