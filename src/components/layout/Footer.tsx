@@ -38,13 +38,13 @@ const footerData = {
 
   contact: [
     {
-      name: 'info@comejuupremieracademy.ac.ke',
-      url: 'mailto:info@comejuupremieracademy.ac.ke',
+      name: 'info@comejuuacademy.ac.ke',
+      url: 'mailto:info@comejuuacademy.ac.ke',
       external: false,
     },
     {
-      name: '0800 123 456',
-      url: 'tel:0800 123 456',
+      name: '0726 796 343 / 0759 913 825',
+      url: 'tel:0726796343',
       external: false,
     },
   ],

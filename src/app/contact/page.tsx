@@ -26,13 +26,36 @@ const Contact = () => {
           <div className="absolute top-0 bg-black/80 h-full w-full z-10">
             <div className="container py-20 h-full flex flex-col gap-10 justify-center">
               <h1 className="font-secondary text-4xl w-full  sm:text-6xl font-black tracking-tight text-white">
-                Leave us a message or ask a question
+                Enrol your child in a school where character and excellence bloom!
               </h1>
 
               <Button className='bg-white text-primary w-max'>
                 Get in touch
                 <RiArrowRightLine />
               </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="container grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="space-y-5">
+            <h2 className="text-xl sm:text-2xl font-bold font-secondary">Contact us today to schedule a school visit</h2>
+
+            <div className="">
+              <p className="text-sm sm:text-base text-gray-500">P.O. Box 48, Gathugu via Ruiru</p>
+              <p className="text-sm sm:text-base text-gray-500">Cell: 0726 796 343 /  0759 913 825</p>
+              <p className="text-sm sm:text-base text-gray-500">Email: info@comejuuacademy.ac.ke</p>
+              <p className="text-sm sm:text-base text-gray-500">Website: www.comejuuacademy.ac.ke</p>
+            </div>
+          </div>
+
+          <div className="space-y-5">
+            <h2 className="text-xl sm:text-2xl font-bold font-secondary">Our Location</h2>
+
+            <div className="">
+              <p className="text-sm sm:text-base text-gray-500">Kigumo Township (Kiambu County)</p>
+              <p className="text-sm sm:text-base text-gray-500">45 kilometres west of Ruiru Town</p>
+              <p className="text-sm sm:text-base text-gray-500">on Ruiru-Kibicho-CRF-Kigumo Road</p>
             </div>
           </div>
         </div>
