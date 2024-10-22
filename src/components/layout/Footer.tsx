@@ -33,6 +33,11 @@ const footerData = {
       url: '/mediaroom',
       external: false,
     },
+    {
+      name: 'Contact',
+      url: '/contact',
+      external: false,
+    },
   ],
 
 
