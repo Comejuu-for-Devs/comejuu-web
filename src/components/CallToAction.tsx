@@ -10,7 +10,7 @@ const CallToAction = () => {
         2025 Intake in Progress. Apply Now!
       </h2>
 
-      <Link href={'/'}>
+      <Link href={'/admissions#admissionForm'}>
         <Button>Apply now</Button>
       </Link>
     </div>

@@ -8,6 +8,7 @@ import Dots from '@/components/layout/Dots'
 import CallToAction from '@/components/CallToAction'
 import CurriculumExcellenceTabs from '@/components/curriculum/CurriculumTabs'
 import ApproachTabs from '@/components/curriculum/ApproachTabs'
+import Link from 'next/link'
 
 const Curriculum = () => {
   return (
@@ -105,10 +106,18 @@ const Curriculum = () => {
                   className='w-full h-[300px] object-cover'
                 />
 
-                <p className="text-base sm:text-lg font-light w-full text-gray-200">
-                  At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
-                  Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
-                </p>
+                <div className="space-y-5">
+                  <p className="text-base sm:text-lg font-light w-full text-gray-200">
+                    At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
+                    Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
+                  </p>
+
+                  <div className="">
+                    <Link href={'/admissions#admissionForm'}>
+                      <Button className='bg-white text-primary'>Apply now</Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>         
@@ -136,10 +145,18 @@ const Curriculum = () => {
                   className='w-full h-[300px] object-cover'
                 />
 
-                <p className="text-base sm:text-lg font-light w-full text-gray-200">
-                  At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
-                  Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
-                </p>
+                <div className="space-y-5">
+                  <p className="text-base sm:text-lg font-light w-full text-gray-200">
+                    At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
+                    Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
+                  </p>
+
+                  <div className="">
+                    <Link href={'/admissions#admissionForm'}>
+                      <Button className='bg-white text-primary'>Apply now</Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>         
@@ -167,10 +184,18 @@ const Curriculum = () => {
                   className='w-full h-[300px] object-cover'
                 />
 
-                <p className="text-base sm:text-lg font-light w-full text-primary">
-                  At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
-                  Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
-                </p>
+                <div className="space-y-5">
+                  <p className="text-base sm:text-lg font-light w-full text-primary">
+                    At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
+                    Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
+                  </p>
+
+                  <div className="">
+                    <Link href={'/admissions#admissionForm'}>
+                      <Button className='bg-white text-primary'>Apply now</Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

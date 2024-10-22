@@ -125,7 +125,7 @@ const Admissions = () => {
         </div>
 
         {/* ENQUIRIES */}
-        <div className="">
+        <div className="" id='admissionForm'>
           <div className="container space-y-10">
             <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
             text-primary">
