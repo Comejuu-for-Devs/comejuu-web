@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { RiArrowRightLine } from 'react-icons/ri'
 
-import { admissionSteps, events } from '@/data'
+import { events } from '@/data'
 
 import Dots from '@/components/layout/Dots'
 // import GhostLine from '@/components/GhostLine'

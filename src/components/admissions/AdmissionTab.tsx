@@ -2,7 +2,7 @@ import React from 'react'
 
 type AdmissionTabSwitchProps = {
   isActive: (i: number) => boolean
-  setActiveTab: any
+  setActiveTab: React.Dispatch<React.SetStateAction<number>>
   name: string
   idx: number
   width?: string
