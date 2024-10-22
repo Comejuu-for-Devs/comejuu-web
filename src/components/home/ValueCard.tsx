@@ -21,7 +21,7 @@ const ValueCard: React.FC<ValueCardProps> = ({ name, description, idx }) => {
       <div className="relative w-full h-full bg-black/70 p-7 text-white
       flex items-end pb-20">
         <div className="container">
-          <div className="w-full sm:w-1/2 flex items-start gap-5 md:gap-8">
+          <div className="w-full sm:w-2/3 flex items-start gap-5 md:gap-8">
             <span className="hidden sm:block text-6xl sm:text-8xl lg:text-9xl text-white/50 font-black font-secondary">{idx}</span>
             <div className="space-y-5">
               <h3 className="text-2xl sm:text-3xl font-semibold font-secondary">We believe in {name}</h3>

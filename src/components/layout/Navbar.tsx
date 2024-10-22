@@ -32,7 +32,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="hidden md:flex items-center gap-3 bg-white/90 py-3 px-5 border
+          <div className="hidden lg:flex items-center gap-3 bg-white/90 py-3 px-5 border
           border-gray-900/20 backdrop-blur-md rounded-full">
             <Navlink name='Home' url='/' />
             <Navlink name='About Comejuu' url='/about' />
