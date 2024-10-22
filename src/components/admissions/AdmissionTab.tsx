@@ -13,7 +13,6 @@ const AdmissionTabSwitch: React.FC<AdmissionTabSwitchProps> = ({
   setActiveTab,
   name,
   idx,
-  width
 }) => {
   return (
     <button
