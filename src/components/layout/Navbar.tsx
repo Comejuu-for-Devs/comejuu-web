@@ -15,13 +15,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='rounded-xl w-full
-      fixed top-5 left-0 z-50 flex items-center'>
+      <nav className='w-full
+      fixed bg-white left-0 z-50 flex items-center'>
         {/* LINE */}
         <div className="absolute h-px w-full bg-gray-900/20 left-0" />
 
         {/* NAV */}
-        <div className="relative z-10 container flex items-center justify-between">
+        <div className="relative z-10 container flex items-center justify-between bg-white">
           <Link href='/' className='w-max bg-white rounded-xl py-1.5 px-2'>
             <Image
               src={logo}

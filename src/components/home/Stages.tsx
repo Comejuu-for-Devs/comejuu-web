@@ -4,9 +4,9 @@ import StageCard from '@/components/home/StageCard'
 
 const Stages = () => {
   return (
-    <section className='py-20 overflow-x-auto'>
+    <section className='pt-10 pb-20 overflow-x-auto'>
       <div className="container space-y-10">
-      <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
+      <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
           text-primary">
           CBC curriculum offered
         </h2>

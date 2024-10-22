@@ -35,7 +35,13 @@ export const metadata: Metadata = {
     { name: "Afordia Zero", url: "https://afordiazero.com"}
   ],
   generator: "Comejuu Premier Academy",
-  keywords: ["finance", "financial management", "accounting", "tax compliance", "budgeting", "money", "money management", "investing", "expense tracking", "track expenses", "financial app"],
+  keywords: [
+    "School Fees", "fees", "Admissions Process", "admission", "enrolment", "Curriculum Offered", "CBC", "subjects",
+    "Extracurricular Activities", "games", "talents", "sports", "School Location", "where", "Boarding Facilities",
+    "boarders", "dormitory", "Academic Performance", "School Calendar", "events", "calendar", "Student Support Services",
+    "Parent-Teacher Meeting", "meetings", "teachers", "parents", "Clubs", "Sports", "Talent Development Programs",
+    "Science Laboratory", "lab", "library", "farm", "Student Life", "Assessment and Examination Information", "Transport Services"
+  ],
   openGraph: {
     title: "Comejuu Premier Academy | Your finances simplified",
     description: "Accounting, compliance, due-diligence and investment management platform.",

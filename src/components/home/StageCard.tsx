@@ -17,11 +17,11 @@ const StageCard: React.FC<StageCardProps> = ({
 
   return (
     <div className={`flex flex-col justify-between p-5 border-2 border-transparent w-[250px]
-    sm:w-[340px] h-[300px] sm:h-[400px] ${bgStyles} hover:scale-95 transition cursor-pointer`}>
+    sm:w-[340px] h-[200px] ${bgStyles} hover:scale-95 transition cursor-pointer`}>
       <hr />
 
       <div className="space-y-5">
-        <h3 className={`text-2xl sm:text-4xl font-secondary flex flex-col ${textStyles}`}>
+        <h3 className={`text-2xl sm:text-3xl font-secondary flex flex-col ${textStyles}`}>
           <span className="font-bold">{first}</span>
           <span className="font-light">{second}</span>
         </h3>

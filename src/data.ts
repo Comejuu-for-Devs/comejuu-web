@@ -115,3 +115,78 @@ export const admissionSteps = [
     `,
   },
 ]
+
+export const excellenceBeyondClassroomItems = [
+  {
+    title: 'Holistic Development',
+    description: `
+      We offer a diverse range of extracurricular activities to ignite the
+      passion of the students, including sports, drama and talent development in
+      ballerina,chess, guitar, scrabble and swimming. We have created a vibrant experience
+      that helps them discover their talents, build teamwork skills, develop a love for learning,
+      and have a blast! 
+    `
+  },
+  {
+    title: 'Educational Outings & Trips',
+    description: `
+      We believe in experiential learning and provide opportunities
+      for our students to explore the world beyond the classroom through educational outings
+      and trips in every school term. 
+    `
+  },
+  {
+    title: 'A Safe and Supportive Environment',
+    description: `
+      Ours is a safe and secure environment where your
+      child can learn and grow, with a focus on their social, psychological, and emotional
+      well-being. Our dedicated staff is always there to support and guide our students. We also
+      prioritize the safety and security of our students with a secure perimeter, 24/7 security
+      personnel, and a dedicated school nurse. What's more we are located at Kigumo
+      Township, within walking distance from a level 4 hospital, police station and market for
+      easy access.
+    `
+  },
+  {
+    title: 'A Strong Community Spirit',
+    description: `
+      We believe in building a strong community where parents,
+      teachers, and students work together to create a supportive and enriching learning
+      experience.
+    `
+  },
+]
+
+export const approaches = [
+  {
+    title: 'Curriculum',
+    description: `
+      We provide preschool (Play-group, Pre-Primary
+      1, and Pre-Primary 2), lower school (grades 1-3), middle
+      school (grades 4-6) and junior secondary (grades 7-9) with day
+      and boarding options
+    `
+  },
+  {
+    title: 'Academic Excellence',
+    description: `
+      Comejuu Premier Academy has a
+      20-year track record of academic success and strong
+      reputation in the County of Kiambu. We strive for academic
+      excellence every day, delivering a world-class
+      Competency-Based Curriculum (C.B.C.) with a focus on critical
+      thinking, problem-solving, creativity and real-world application.
+    `
+  },
+  {
+    title: 'Modern Facilities',
+    description: `
+      Our school boasts spacious classrooms,
+      a well-equipped library, a modern science laboratory, a library,
+      and a computer lab to prepare our students for the digital age.
+      This, coupled with our dedicated and experienced teachers,
+      equip our students with the knowledge and skills they need to
+      succeed in the 21st century.
+    `
+  },
+]

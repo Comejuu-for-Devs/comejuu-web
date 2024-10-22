@@ -5,20 +5,21 @@ import { RiArrowRightLine } from 'react-icons/ri'
 import { admissionSteps, events } from '@/data'
 
 import Dots from '@/components/layout/Dots'
-import AdmissionStep from '@/components/admissions/AdmissionStep'
 // import GhostLine from '@/components/GhostLine'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import Req from '@/components/admissions/Req'
 import AdmissionEvent from '@/components/admissions/AdmissionEvent'
-import HelpForm from '@/components/admissions/HelpForm'
+// import HelpForm from '@/components/admissions/HelpForm'
 import ApplicationForm from '@/components/admissions/ApplicationForm'
-import FeeCard from '@/components/admissions/FeeCard'
-import CallToAction from '@/components/CallToAction'
+import AdmissionStepsTab from '@/components/admissions/AdmissionStepsTab'
+// import ApplicationForm from '@/components/admissions/ApplicationForm'
+// import FeeCard from '@/components/admissions/FeeCard'
+// import CallToAction from '@/components/CallToAction'
 
 const Admissions = () => {
   return (
-    <section className='page min-h-screen'>
+    <section className='min-h-screen'>
       <Dots />
 
       <div className="space-y-10 sm:space-y-20">
@@ -84,76 +85,69 @@ const Admissions = () => {
             />
           </div>
         </div>
+        
+        <div className="">
+          {/* STEPS */}
+          <div className="bg-primary py-16">
+            <div className="container space-y-10">
+              <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
+              text-white">
+                Our Admission Process
+              </h2>
 
-        {/* STEPS */}
-        <div className="bg-primary py-10 rounded-2xl">
-          <div className="container space-y-10">
-            <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
-            text-white">
-              Our Admission Process
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-              {admissionSteps.map(step => (
-                <AdmissionStep
-                  key={step.stepNo}
-                  stepNo={step.stepNo}
-                  title={step.title}
-                  description={step.description}
-                /> 
-              ))}
+              <AdmissionStepsTab />
             </div>
-
           </div>
-        </div>
 
-        {/* EVENTS */}
-        <div className="bg-secondary py-10 rounded-2xl">
-          <div className="container space-y-10">
-            <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
-            text-white">
-              Upcoming events
-            </h2>
+          {/* EVENTS */}
+          <div className="bg-secondary py-16">
+            <div className="container space-y-10">
+              <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
+              text-white">
+                Upcoming events
+              </h2>
 
-            <div className="w-full overflow-x-auto pb-5">
-              <div className="flex gap-3 w-max">
-                {events.map((event, i) => (
-                  <AdmissionEvent
-                    key={i}
-                    title={event.title}
-                    date={event.date}
-                    time='10.00 AM - 2.00 PM'
-                  />
-                ))}
+              <div className="w-full overflow-x-auto pb-5">
+                <div className="flex gap-3 w-max">
+                  {events.map((event, i) => (
+                    <AdmissionEvent
+                      key={i}
+                      title={event.title}
+                      date={event.date}
+                      time='10.00 AM - 2.00 PM'
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
 
         {/* ENQUIRIES */}
         <div className="">
           <div className="container space-y-10">
-            <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
+            <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
             text-primary">
-              How can we help you today?
+              Apply for 2025 Intake Now
             </h2>
 
-            <HelpForm />
+            <ApplicationForm />
           </div>
         </div>
 
         {/* FIND OUT MORE */}
-        <div className="bg-primary py-10 rounded-2xl">
+        <div className="bg-primary py-10">
           <div className="container space-y-10">
-            <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
+            <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
             text-white">
               Find out more about Comejuu
             </h2>
 
             <Link
-              href='https://www.google.com/maps/place/COMEJUU+PREMIER+ACADEMY/@-1.0314208,36.827764,17z/data=!3m1!4b1!4m6!3m5!1s0x182f33d5fd340753:0x8644a63bf8a98e0a!8m2!3d-1.0314262!4d36.8303443!16s%2Fg%2F1vfhk70s?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D'
-              target='_blank'
+              // href='https://www.google.com/maps/place/COMEJUU+PREMIER+ACADEMY/@-1.0314208,36.827764,17z/data=!3m1!4b1!4m6!3m5!1s0x182f33d5fd340753:0x8644a63bf8a98e0a!8m2!3d-1.0314262!4d36.8303443!16s%2Fg%2F1vfhk70s?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D'
+              href='/contact'
+              // target='_blank'
               className='block'
             >
               <Button className='bg-white text-primary'>
@@ -165,7 +159,7 @@ const Admissions = () => {
         </div>
 
         {/* APPLICATION */}
-        <div className="">
+        {/* <div className="">
           <div className="container space-y-10">
             <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
             text-primary">
@@ -174,10 +168,10 @@ const Admissions = () => {
 
             <ApplicationForm />
           </div>
-        </div>
+        </div> */}
 
         {/* FEE STRUCTURES */}
-        <div className="bg-secondary py-10 rounded-2xl">
+        {/* <div className="bg-secondary py-10 rounded-2xl">
           <div className="container space-y-10">
             <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
             text-white">
@@ -196,10 +190,10 @@ const Admissions = () => {
               <FeeCard name='Grade 9' period='2025 - 2026 Fee Structure' url='#'/>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA */}
-        <CallToAction />
+        {/* <CallToAction /> */}
       </div>
     </section>
   )

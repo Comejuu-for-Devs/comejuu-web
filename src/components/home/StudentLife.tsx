@@ -23,14 +23,13 @@ const events = [
 ]
 const StudentLife = () => {
   return (
-    <section className='bg-secondary rounded-2xl py-20 w-full'>
+    <section className='bg-secondary py-10 w-full'>
       <div className="container space-y-10">
-        <h2 className="font-secondary text-4xl sm:text-5xl w-full sm:w-1/2 font-bold tracking-tight
-          text-white">
+        <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold text-white">
           Student life at Comejuu
         </h2>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto pb-5">
           <div className='flex gap-5 w-max'>
             {events.map((event, i) => (
               <StudentLifeCard

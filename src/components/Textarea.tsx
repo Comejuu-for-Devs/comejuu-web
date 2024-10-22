@@ -31,9 +31,8 @@ const Textarea = (props: TextareaProps) => {
         ${err ? 'border-red-500' : 'border-gray-200'}
         !bg-gray-50 `}
         {...rest}
-      >
-        {value}
-      </textarea>
+        defaultValue={value}
+      />
 
       {info && (
         <span className="text-xs text-neutral-500">

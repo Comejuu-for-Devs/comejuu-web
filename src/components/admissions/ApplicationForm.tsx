@@ -5,6 +5,7 @@ import { RiArrowRightLine } from 'react-icons/ri'
 
 import Input from '@/components/Input'
 import Button from '@/components/Button'
+import Textarea from '@/components/Textarea'
 
 const ApplicationForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -19,6 +20,38 @@ const ApplicationForm = () => {
         value={''}
         onChange={() => {}}
         name='parentName'
+      />
+
+      <Input
+        label="The student's name *"
+        placeholder='e.g. John Doe'
+        value={''}
+        onChange={() => {}}
+        name='studentName'
+      />
+
+      <Input
+        label="The student's current grade *"
+        placeholder="e.g. 1"
+        value={''}
+        onChange={() => {}}
+        name='grade'
+      />
+
+      <Input
+        label="Day school or boarding"
+        placeholder="e.g. Boarding"
+        value={''}
+        onChange={() => {}}
+        name='dayOrBoarding'
+      />
+
+      <Input
+        label="Your relationship to the student (Parent, guardian, sibling, donor)"
+        placeholder="e.g. Boarding"
+        value={''}
+        onChange={() => {}}
+        name='dayOrBoarding'
       />
 
       <Input
@@ -37,23 +70,13 @@ const ApplicationForm = () => {
         name='email'
       />
 
-      <Input
-        label="Your child's current grade *"
-        placeholder="e.g. 1"
+      <Textarea
+        label="Tell us your issue"
+        placeholder="e.g. Hi, I want to ask about..."
         value={''}
         onChange={() => {}}
-        name='grade'
+        name='message'
       />
-
-      <Input
-        label="Day school or boarding"
-        placeholder="e.g. Boarding"
-        value={''}
-        onChange={() => {}}
-        name='dayOrBoarding'
-      />
-
-
 
       <Button type='submit' className='w-max'>
         Submit application

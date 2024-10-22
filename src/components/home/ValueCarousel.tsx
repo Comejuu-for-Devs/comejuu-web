@@ -21,18 +21,18 @@ const ValueCarousel = () => {
   }
 
   return (
-    <div className="relative mx-0 lg:mx-16">
+    <div className="absolute top-0 left-0 w-full h-full flex items-end">
       <ValueCard
         name={values[idx].name}
         description={values[idx].description}
         idx={idx + 1}
       />
-
-      <div className="absolute top-[80%] xl:top-1/2 -translate-y-1/2 flex items-center
-      justify-between w-full px-5 xl:px-10 2xl:px-48">
+      
+      <div className="absolute bottom-0 xl:bottom-20 -translate-y-1/2 flex items-center
+      justify-between w-full px-5">
         <button
           onClick={() => switchValue('b')}
-          className="h-16 w-16 rounded-full flex items-center justify-center border
+          className="h-10 w-10 sm:h-16 sm:w-16 rounded-full flex items-center justify-center border
           border-white/50 text-tertiary text-lg hover:bg-white hover:text-primary
           transition"
         >
@@ -41,7 +41,7 @@ const ValueCarousel = () => {
 
         <button
           onClick={() => switchValue('f')}
-          className="h-16 w-16 rounded-full flex items-center justify-center border
+          className="h-10 w-10 sm:h-16 sm:w-16 rounded-full flex items-center justify-center border
           border-white/50 text-tertiary text-lg hover:bg-white hover:text-primary
           transition"
         >
