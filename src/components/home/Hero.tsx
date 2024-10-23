@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className='min-h-screen w-full'>
       {/* HERO */}
-      <div className="relative w-full h-[80vh] md:h-[70vh]">
+      <div className="relative w-full h-[90vh] md:h-[70vh]">
         <div className="container py-20 h-full flex flex-col gap-10 justify-center">
           <div className="py-20 h-full flex flex-col sm:flex-row gap-10 relative z-10">
             <h1 className="font-secondary text-4xl w-full  sm:text-6xl font-black tracking-tight text-white">
