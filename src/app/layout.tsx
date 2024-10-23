@@ -20,16 +20,16 @@ const fontSecondary = FontSecondary({
 
 
 export const metadata: Metadata = {
-  title: "Comejuu Premier Acadamy",
-  description: "Accounting, compliance, due-diligence and investment management platform.",
+  title: "Comejuu Premier Academy",
+  description: "Where vital academics meet a deep respect for childhood.",
   applicationName: 'Comejuu Premier Academy',
   twitter: {
     card: 'summary_large_image',
-    site: '@AfordiaZero',
-    creator: '@AfordiaZero',
+    site: '@ComejuuAcademy',
+    creator: '@ComejuuAcademy',
     images: [''],
     title: 'Comejuu Premier Academy',
-    description: 'Your finances simplified.'
+    description: 'Where vital academics meet a deep respect for childhood.'
   },
   authors: [
     { name: "Afordia Zero", url: "https://afordiazero.com"}
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     "Science Laboratory", "lab", "library", "farm", "Student Life", "Assessment and Examination Information", "Transport Services"
   ],
   openGraph: {
-    title: "Comejuu Premier Academy | Your finances simplified",
-    description: "Accounting, compliance, due-diligence and investment management platform.",
-    siteName: "Fyntrax",
+    title: "Comejuu Premier Academy",
+    description: "Where vital academics meet a deep respect for childhood.",
+    siteName: "Comejuu",
     url: "",
     type: "website",
     images: [
