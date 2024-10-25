@@ -1,6 +1,9 @@
+"use client";
 import React from 'react'
 import TestimonialCard from '@/components/home/TestimonialCard'
 import GhostLine from "@/components/GhostLine"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const testimonials = [
   {
@@ -19,24 +22,52 @@ const testimonials = [
     role: "Parent",
   }
 ]
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 const Testimonials = () => {
   return (
     <section className='bg-primary py-16 w-full'>
       <div className="container space-y-14">
-        <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
-        text-white">
+        <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight text-white">
           Parents are happy, so will you be
         </h2>
 
         <GhostLine styles='via-white/30' />
         
-        <div className="overflow-x-auto pb-10">
-          <div className='flex gap-5 w-max'>
-            {testimonials.map((t, i) => (
-              <TestimonialCard key={i} content={t.content} author={t.author} role={t.role}/>
-            ))}
-          </div>
-        </div>
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={5000}
+          keyBoardControl={true}
+          customTransition="all .5s"
+          transitionDuration={500}
+          minimumTouchDrag={100}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="px-2 py-2"
+        >
+          {testimonials.map((t, i) => (
+            <div key={i} className="h-full cursor-pointer">
+              <TestimonialCard content={t.content} author={t.author} role={t.role}/>
+            </div>
+          ))}
+        </Carousel>
       </div>
     </section>
   )

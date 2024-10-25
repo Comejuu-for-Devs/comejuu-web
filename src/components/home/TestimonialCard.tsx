@@ -11,20 +11,21 @@ type TestimonialProps = {
 
 const TestimonialCard = ({ content, author, role, img }: TestimonialProps) => {
   return (
-    <div className='w-[285px] sm:w-[400px]'>
-      <p className='text-lg sm:text-xl mb-5 w-full text-gray-200'>{content}</p>
-      <div className='flex items-center gap-2'>
+    <div className='h-full flex flex-col justify-between p-6 bg-gray-800 rounded-lg'>
+      <div className='flex-grow overflow-hidden'>
+        <p className='text-lg mb-5 text-gray-200 line-clamp-[8]'>{content}</p>
+      </div>
+      <div className='flex items-center gap-2 mt-4'>
         {img ? 
           <Image
-            width={1920}
-            height={1280}
+            width={40}
+            height={40}
             src={img}
             alt=''
             className='w-10 h-10 object-cover rounded-full'
           />
           : 
-          <div className="h-10 w-10 bg-gray-200 rounded-full flex items-center
-          justify-center text-lg text-gray-500">
+          <div className="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center text-lg text-gray-500">
             <RiUserLine />
           </div>
         }

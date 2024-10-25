@@ -3,33 +3,35 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-interface Props {
-  title: string,
-  date: string,
-  linkTitle: string,
+type StudentLifeCardProps = {
+  title: string
+  img: string
   link: string
+  linkTitle: string
 }
 
-export const StudentLifeCard = ({ title, linkTitle, link }: Props) => {
+export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({ title, img, link, linkTitle }) => {
   return (
-    <div className='w-[275px] sm:w-[388px] text-white space-y-6 rounded-2xl'>
-      <Image
-        width={1920}
-        height={1280}
-        src='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-        alt=''
-        className='w-full h-[300px] object-cover rounded'
-      />
-
-      <div>
-        <h1 className='text-lg font-semibold'>{title}</h1>
-        
-        <Link href={link} className='text-sm font-semibold text-tertiary flex gap-3 items-center'>
-          {linkTitle}
-          <HiOutlineArrowNarrowRight />
-        </Link>
+    <div className="w-full text-white space-y-4 ">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+        <Image
+          src={img}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="transition-transform duration-300 hover:scale-110"
+        />
       </div>
-
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <Link
+        href={link}
+        // legacyBehavior
+        scroll={true}
+        className="inline-flex items-center text-sm font-semibold text-tertiary hover:underline"
+      >
+        <span>{linkTitle}</span>
+        <HiOutlineArrowNarrowRight className="ml-2" />
+      </Link>
     </div>
-  )
+  );
 }

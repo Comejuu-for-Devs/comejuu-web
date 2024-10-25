@@ -37,7 +37,22 @@ body {
 .page {
   @apply pt-36 pb-20 relative;
 }
+.carousel-container,
+.react-multi-carousel-list {
+  height: 100% !important;
+}
 
+.carousel-item {
+  height: 100%;
+}
+
+.react-multi-carousel-track {
+  height: 100%;
+}
+
+.react-multi-carousel-item {
+  height: 100%;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
