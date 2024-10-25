@@ -1,25 +1,27 @@
-import React from 'react'
-import Link from 'next/link'
-import { RiArrowRightLine } from 'react-icons/ri'
+"use client";
+import React from "react";
+import Link from "next/link";
+import { RiArrowRightLine } from "react-icons/ri";
 
-import { events } from '@/data'
+import { events } from "@/data";
 
-import Dots from '@/components/layout/Dots'
+import Dots from "@/components/layout/Dots";
 // import GhostLine from '@/components/GhostLine'
-import Button from '@/components/Button'
-import Image from 'next/image'
-import Req from '@/components/admissions/Req'
-import AdmissionEvent from '@/components/admissions/AdmissionEvent'
+import Button from "@/components/Button";
+import Image from "next/image";
+import Req from "@/components/admissions/Req";
+import AdmissionEvent from "@/components/admissions/AdmissionEvent";
 // import HelpForm from '@/components/admissions/HelpForm'
-import ApplicationForm from '@/components/admissions/ApplicationForm'
-import AdmissionStepsTab from '@/components/admissions/AdmissionStepsTab'
+import ApplicationForm from "@/components/admissions/ApplicationForm";
+import AdmissionStepsTab from "@/components/admissions/AdmissionStepsTab";
 // import ApplicationForm from '@/components/admissions/ApplicationForm'
 // import FeeCard from '@/components/admissions/FeeCard'
 // import CallToAction from '@/components/CallToAction'
+import ApplyNowButton from "@/components/ApplyNowButton";
 
 const Admissions = () => {
   return (
-    <section className='min-h-screen'>
+    <section className="min-h-screen">
       <Dots />
 
       <div className="space-y-10 sm:space-y-20">
@@ -28,11 +30,10 @@ const Admissions = () => {
           <Image
             width={1920}
             height={1280}
-            src='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            alt=''
-            className='asbolute w-full h-full object-cover rounded-xl'
+            src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            className="asbolute w-full h-full object-cover rounded-xl"
           />
-
 
           <div className="absolute top-0 bg-black/80 h-full w-full z-10">
             <div className="container py-20 h-full flex flex-col gap-10 justify-center">
@@ -40,58 +41,66 @@ const Admissions = () => {
                 Where Your Child&apos;s Future Takes Flight With Confidence
               </h1>
 
-              <Button className='bg-white text-primary w-max'>
-                Apply Now
-                <RiArrowRightLine />
-              </Button>
+              <ApplyNowButton
+                text="Fill Admission Form"
+                onClick={() => {
+                  document
+                    .getElementById("admissionForm")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              />
             </div>
           </div>
         </div>
 
         {/* REQS */}
         <div className="container space-y-5">
-          <h3 className="text-xl sm:text-2xl font-light">Admission requirements</h3>
+          <h3 className="text-xl sm:text-2xl font-light">
+            Admission requirements
+          </h3>
 
           <hr />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
             <Req
-              title='Birth certificate'
+              title="Birth certificate"
               description="A copy of your child's birth certificate"
             />
           </div>
         </div>
-        
+
         <div className="">
           {/* STEPS */}
           <div className="bg-primary py-16">
             <div className="container space-y-10">
-              <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
-              text-white">
+              <h2
+                className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
+              text-white"
+              >
                 Our Admission Process
               </h2>
 
@@ -102,8 +111,10 @@ const Admissions = () => {
           {/* EVENTS */}
           <div className="bg-secondary py-16">
             <div className="container space-y-10">
-              <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
-              text-white">
+              <h2
+                className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
+              text-white"
+              >
                 Upcoming events
               </h2>
 
@@ -114,21 +125,22 @@ const Admissions = () => {
                       key={i}
                       title={event.title}
                       date={event.date}
-                      time='10.00 AM - 2.00 PM'
+                      time="10.00 AM - 2.00 PM"
                     />
                   ))}
                 </div>
               </div>
-
             </div>
           </div>
         </div>
 
         {/* ENQUIRIES */}
-        <div className="" id='admissionForm'>
+        <div className="" id="admissionForm">
           <div className="container space-y-10">
-            <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
-            text-primary">
+            <h2
+              className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
+            text-primary"
+            >
               Apply for 2025 Intake Now
             </h2>
 
@@ -139,18 +151,20 @@ const Admissions = () => {
         {/* FIND OUT MORE */}
         <div className="bg-primary py-10">
           <div className="container space-y-10">
-            <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
-            text-white">
+            <h2
+              className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
+            text-white"
+            >
               Find out more about Comejuu
             </h2>
 
             <Link
               // href='https://www.google.com/maps/place/COMEJUU+PREMIER+ACADEMY/@-1.0314208,36.827764,17z/data=!3m1!4b1!4m6!3m5!1s0x182f33d5fd340753:0x8644a63bf8a98e0a!8m2!3d-1.0314262!4d36.8303443!16s%2Fg%2F1vfhk70s?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D'
-              href='/contact'
+              href="/contact"
               // target='_blank'
-              className='block'
+              className="block"
             >
-              <Button className='bg-white text-primary'>
+              <Button className="bg-white text-primary">
                 Visit us today
                 <RiArrowRightLine />
               </Button>
@@ -196,7 +210,7 @@ const Admissions = () => {
         {/* <CallToAction /> */}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Admissions
+export default Admissions;

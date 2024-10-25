@@ -1,6 +1,6 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
-import { RiArrowRightLine } from 'react-icons/ri'
 
 import Button from '@/components/Button'
 // import Stage from '@/components/curriculum/Stage'
@@ -9,8 +9,37 @@ import CallToAction from '@/components/CallToAction'
 import CurriculumExcellenceTabs from '@/components/curriculum/CurriculumTabs'
 import ApproachTabs from '@/components/curriculum/ApproachTabs'
 import Link from 'next/link'
+import {useRouter, useSearchParams } from 'next/navigation'
+import ApplyNowButton from '@/components/ApplyNowButton'
 
 const Curriculum = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  useEffect(() => {
+    const section = searchParams.get("section");
+
+    const timeoutId = setTimeout(() => {
+      if (section) {
+        const element = document.getElementById(`${section}-container`);
+        if (element) {
+          // Get any fixed header height
+          const header = document.getElementById(section);
+          const headerHeight = header ? header.offsetHeight : 0;
+          console.log(headerHeight)
+          // Scroll to element with offset
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - headerHeight + 280, 
+            behavior: 'smooth'
+          });
+        }
+      }
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchParams]);
+
   return (
     <section className='min-h-screen pb-20 relative'>
       <Dots />
@@ -33,10 +62,7 @@ const Curriculum = () => {
                 Where Your Child&apos;s Future Takes Flight With Confidence
               </h1>
 
-              <Button className='bg-white text-primary w-max'>
-                Apply Now
-                <RiArrowRightLine />
-              </Button>
+              <ApplyNowButton onClick={() => {router.push('/admissions')}} />
             </div>
           </div>
         </div>
@@ -84,10 +110,10 @@ const Curriculum = () => {
         </div>
         
         {/* STAGES */}
-        <div className="">
+        <div className="mx-2 md:mx-20 space-y-20">
           {/* PRE-SCHOOL */}
-          <div className="bg-primary rounded-2xl py-10 sm:py-16">
-            <div className="container space-y-10">
+          <div id="pre-school-container" className="bg-primary rounded-3xl py-10 sm:py-16">
+            <div id="pre-school" className="container space-y-10">
               <div className="space-y-5">
                 <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
                 text-white">
@@ -123,8 +149,8 @@ const Curriculum = () => {
           </div>         
 
           {/* PRIMARY SCHOOL */}
-          <div className="bg-secondary rounded-2xl py-10 sm:py-16">
-            <div className="container space-y-10">
+          <div id="primary-school-container" className="bg-secondary rounded-3xl py-10 sm:py-16">
+            <div id="primary-school" className="container space-y-10">
               <div className="space-y-5">
                 <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
                 text-white">
@@ -162,8 +188,8 @@ const Curriculum = () => {
           </div>         
 
           {/* JUNIOR SECONDARY */}
-          <div className="bg-tertiary rounded-2xl py-10 sm:py-16">
-            <div className="container space-y-10">
+          <div id="junior-secondary-container" className="bg-tertiary rounded-3xl py-10 sm:py-16">
+            <div id="junior-secondary" className="container space-y-10">
               <div className="space-y-5">
                 <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
                 text-primary">
@@ -202,7 +228,7 @@ const Curriculum = () => {
         </div>
 
         {/* EXTRACURRICULAR */}
-        <div className="container space-y-10">
+        <div id="extracurricular-container" className="container space-y-10">
           <div className="space-y-5">
             <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-2/3 font-bold tracking-tight
             text-primary">

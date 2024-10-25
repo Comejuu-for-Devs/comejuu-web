@@ -17,7 +17,7 @@ export default function Home() {
       <StudentLife />
       <NewsEvents />
       <Testimonials />
-      <MediaCenter />
+      
     </section>
   );
 }

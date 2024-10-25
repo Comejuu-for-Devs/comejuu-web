@@ -1,16 +1,20 @@
-import React from 'react'
-import Image from 'next/image'
-import { RiArrowRightLine, RiDoubleQuotesL } from 'react-icons/ri'
+"use client";
+import React from "react";
+import Image from "next/image";
+import { RiArrowRightLine, RiDoubleQuotesL } from "react-icons/ri";
 
-import Dots from '@/components/layout/Dots'
-import Button from '@/components/Button'
-import StaffCard from '@/components/about/StaffCard'
+import Dots from "@/components/layout/Dots";
+import Button from "@/components/Button";
+import StaffCard from "@/components/about/StaffCard";
 // import CommunityCard from '@/components/about/CommunityCard'
-import CallToAction from '@/components/CallToAction'
+import CallToAction from "@/components/CallToAction";
+import ApplyNowButton from "@/components/ApplyNowButton";
+import { useRouter } from "next/navigation";
 
 const About = () => {
+  const router = useRouter();
   return (
-    <section className='min-h-screen pb-20 relative'>
+    <section className="min-h-screen pb-20 relative">
       <Dots />
 
       <div className="space-y-10 sm:space-y-20">
@@ -20,11 +24,10 @@ const About = () => {
             <Image
               width={1920}
               height={1280}
-              src='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              alt=''
-              className='asbolute w-full h-full object-cover'
+              src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              className="asbolute w-full h-full object-cover"
             />
-
 
             <div className="absolute top-0 bg-black/80 h-full w-full z-10">
               <div className="container py-20 h-full flex flex-col gap-10 justify-center">
@@ -32,10 +35,11 @@ const About = () => {
                   Where Your Child&apos;s Future Takes Flight With Confidence
                 </h1>
 
-                <Button className='bg-white text-primary w-max'>
-                  Apply Now
-                  <RiArrowRightLine />
-                </Button>
+                <ApplyNowButton
+                  onClick={() => {
+                    router.push(`/admissions`);
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -48,11 +52,17 @@ const About = () => {
                   Message from the director
                 </h2>
 
-                <RiDoubleQuotesL className='text-tertiary text-3xl' />
+                <RiDoubleQuotesL className="text-tertiary text-3xl" />
 
                 <p className="text-base sm:text-lg font-light w-full text-gray-500">
-                  At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
-                  Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
+                  At Comejuu, we strive to nurture both academic excellence and
+                  personal growth. Our dedicated educators create a supportive,
+                  inclusive environment that encourages curiosity, critical
+                  thinking, and collaboration. Through engaging lessons and
+                  diverse extracurricular activities, we help students discover
+                  their passions and develop the skills they need for the
+                  future. We’re excited to be part of your child’s journey and
+                  look forward to helping them thrive.
                 </p>
               </div>
 
@@ -61,11 +71,17 @@ const About = () => {
                   Message from the principal
                 </h2>
 
-                <RiDoubleQuotesL className='text-tertiary text-3xl' />
+                <RiDoubleQuotesL className="text-tertiary text-3xl" />
 
                 <p className="text-base sm:text-lg font-light w-full text-gray-500">
-                  At Comejuu, we strive to nurture both academic excellence and personal growth. Our dedicated educators create a supportive, inclusive environment that encourages curiosity, critical thinking, and collaboration.
-                  Through engaging lessons and diverse extracurricular activities, we help students discover their passions and develop the skills they need for the future. We’re excited to be part of your child’s journey and look forward to helping them thrive.
+                  At Comejuu, we strive to nurture both academic excellence and
+                  personal growth. Our dedicated educators create a supportive,
+                  inclusive environment that encourages curiosity, critical
+                  thinking, and collaboration. Through engaging lessons and
+                  diverse extracurricular activities, we help students discover
+                  their passions and develop the skills they need for the
+                  future. We’re excited to be part of your child’s journey and
+                  look forward to helping them thrive.
                 </p>
               </div>
             </div>
@@ -75,36 +91,37 @@ const About = () => {
         {/* OUR STAFF */}
         <div className="bg-primary py-16">
           <div className="container space-y-10">
-            <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
-            text-white">
+            <h2
+              className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
+            text-white"
+            >
               Our Staff
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
               <StaffCard
-                name='John Doe'
-                role='Teacher'
-                img='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                name="John Doe"
+                role="Teacher"
+                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
               <StaffCard
-                name='John Doe'
-                role='Lab assistant'
-                img='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                name="John Doe"
+                role="Lab assistant"
+                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
               <StaffCard
-                name='John Doe'
-                role='Guitar teacher'
-                img='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                name="John Doe"
+                role="Guitar teacher"
+                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
               <StaffCard
-                name='John Doe'
-                role='Grounds keeper'
-                img='https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                name="John Doe"
+                role="Grounds keeper"
+                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
             </div>
           </div>
         </div>
-        
 
         {/* OUR COMMUNITY */}
         {/* <div className="">
@@ -143,7 +160,7 @@ const About = () => {
         <CallToAction />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
