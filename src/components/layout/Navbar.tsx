@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { RiMenu2Line, RiSearch2Line } from 'react-icons/ri'
-import { usePathname } from 'next/navigation'
 
 import Button from '@/components/Button'
 import Menu from '@/components/layout/Menu'
@@ -13,7 +12,6 @@ import logo from '@/assets/logo.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const pathname = usePathname()
 
   return (
     <>
@@ -36,12 +34,12 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center gap-3 bg-white/90 py-3 px-5 border
           border-gray-900/20 backdrop-blur-md rounded-full">
-            <Navlink name='Home' url='/' isActive={pathname === '/'} />
-            <Navlink name='About Comejuu' url='/about' isActive={pathname === '/about'} />
-            <Navlink name='Curriculum' url='/curriculum' isActive={pathname === '/curriculum'} />
-            <Navlink name='Admissions' url='/admissions' isActive={pathname === '/admissions'} />
-            <Navlink name='Media Room' url='/mediaroom' isActive={pathname === '/mediaroom'} />
-            <Navlink name='Contact' url='/contact' isActive={pathname === '/contact'} />
+            <Navlink name='Home' url='/' />
+            <Navlink name='About Comejuu' url='/about' />
+            <Navlink name='Curriculum' url='/curriculum' />
+            <Navlink name='Admissions' url='/admissions' />
+            <Navlink name='Media Room' url='/mediaroom'  />
+            <Navlink name='Contact' url='/contact' />
           </div>
 
           <div className="flex items-center gap-1">

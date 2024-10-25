@@ -1,14 +1,19 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 type NavlinkProps = {
   name: string
   url: string
-  isActive: boolean
   classNames?: string
 }
 
-const Navlink: React.FC<NavlinkProps> = ({ name, url, isActive, classNames }) => {
+const Navlink: React.FC<NavlinkProps> = ({ name, url, classNames }) => {
+  const pathname = usePathname()
+  const isActive = pathname === url
+  
   return (
     <Link
       href={url}
