@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { RiArrowRightLine, RiDoubleQuotesL } from "react-icons/ri";
+import { RiDoubleQuotesL } from "react-icons/ri";
 
 import Dots from "@/components/layout/Dots";
-import Button from "@/components/Button";
 import StaffCard from "@/components/about/StaffCard";
 // import CommunityCard from '@/components/about/CommunityCard'
 import CallToAction from "@/components/CallToAction";

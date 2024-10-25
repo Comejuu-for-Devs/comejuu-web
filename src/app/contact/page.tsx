@@ -1,9 +1,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { RiArrowRightLine } from 'react-icons/ri'
 import Dots from '@/components/layout/Dots'
-import Button from '@/components/Button'
 import HelpForm from '@/components/admissions/HelpForm'
 import ApplyNowButton from '@/components/ApplyNowButton'
 

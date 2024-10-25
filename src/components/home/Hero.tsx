@@ -1,12 +1,8 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { RiArrowRightLine } from "react-icons/ri";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 // import Dots from '@/components/layout/Dots'
-import Button from "@/components/Button";
 import ValueCarousel, { ValueSlide } from "@/components/home/ValueCarousel";
 
 export const values: ValueSlide[] = [
