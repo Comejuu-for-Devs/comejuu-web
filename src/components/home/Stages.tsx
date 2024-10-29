@@ -1,22 +1,10 @@
 "use client";
 import React from "react";
-
 import StageCard from "@/components/home/StageCard";
-import { useEffect, useState } from "react";
+import { useGetWindowWidth } from "@/hooks/useGetWindowWidth";
 
 const Stages = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-     const checkIfMobile = () => {
-       setIsMobile(window.innerWidth <= 768);
-     };
-
-     checkIfMobile();
-     window.addEventListener("resize", checkIfMobile);
-
-     return () => window.removeEventListener("resize", checkIfMobile);
-   }, []);
+  const isMobile = useGetWindowWidth();
   return (
     <section className="pb-20 overflow-x-auto">
       <div className="container space-y-10">
@@ -33,7 +21,7 @@ const Stages = () => {
               sectionId="pre-school"
               name="Pre school"
               bgStyles="bg-primary"
-              textStyles="text-white"
+              textStyles="text-tertiary"
               level="playgroup, pp1, pp2"
             />
             <StageCard

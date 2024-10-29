@@ -23,22 +23,6 @@ const HelpForm = () => {
       />
 
       <Input
-        label="Your child's name *"
-        placeholder="e.g. John Doe Jr"
-        value={''}
-        onChange={() => {}}
-        name='childName'
-      />
-
-      <Input
-        label="Your child's current grade *"
-        placeholder="e.g. 1"
-        value={''}
-        onChange={() => {}}
-        name='grade'
-      />
-
-      <Input
         label="Your phone number *"
         placeholder="e.g. 07XXXXXXXX"
         value={''}
