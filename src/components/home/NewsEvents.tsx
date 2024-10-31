@@ -1,6 +1,5 @@
 import React from 'react'
 import { RiCircleFill } from 'react-icons/ri'
-
 import EventCard from '@/components/home/EventCard'
 import { events } from '@/data'
 

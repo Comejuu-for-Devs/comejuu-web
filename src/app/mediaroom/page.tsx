@@ -1,8 +1,10 @@
-import MediaCenter from "@/components/home/MediaCenter";
+import React, { Suspense } from "react";
 import Dots from "@/components/layout/Dots";
 import Image from "next/image";
-import React from "react";
 import TopSection from "./components/topSection";
+
+// Dynamic imports
+const MediaCenter = React.lazy(() => import("@/components/home/MediaCenter"));
 
 const MediaRoom = () => {
   return (
@@ -20,12 +22,11 @@ const MediaRoom = () => {
 
           <TopSection />
         </div>
-        <div className="container">
-          {/* <h1 className="font-secondary text-6xl w-full sm:w-1/2 sm:text-8xl font-black tracking-tight">
+
+        {/* <h1 className="font-secondary text-6xl w-full sm:w-1/2 sm:text-8xl font-black tracking-tight">
             Press & media
           </h1> */}
-          <MediaCenter />
-        </div>
+        <MediaCenter />
       </div>
     </section>
   );

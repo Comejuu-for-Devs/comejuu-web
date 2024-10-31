@@ -32,6 +32,7 @@ const CurriculumExcellenceTabs = () => {
             {excellenceBeyondClassroomItems.filter((_, i) => isActive(i+1)).map((item, i) => (
               <ApproachCard
                 key={i}
+                img={item.image}
                 title={item.title}
                 description={item.description}
                 imgHeight='250px'

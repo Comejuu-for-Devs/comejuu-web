@@ -21,9 +21,9 @@ const AdmissionEvent: React.FC<AdmissionEventProps> = ({ title, date, time }) =>
       <div className="px-3 pb-3">
         <h5 className="text-white font-bold text-xl">{title}</h5>
         <p className="text-gray-300 text-base">{time}</p>
-        <Link href='/' className='text-sm underline text-gray-300'>
+        {/* <Link href='/' className='text-sm underline text-gray-300'>
           Learn more
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

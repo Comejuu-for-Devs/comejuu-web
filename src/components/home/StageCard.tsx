@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import ApplyNowButton from "../ApplyNowButton";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Link from "next/link";
 
@@ -46,7 +45,7 @@ const StageCard: React.FC<StageCardProps> = ({
           href={`/curriculum?section=${sectionId}`}
           // legacyBehavior
           scroll={true}
-          className={`inline-flex items-center text-sm font-semibold hover:underline ${textStyles}`}
+          className={`inline-flex items-center underline text-sm font-semibold hover:underline ${textStyles}`}
         >
           <span>Learn more</span>
           <HiOutlineArrowNarrowRight className="ml-2" />

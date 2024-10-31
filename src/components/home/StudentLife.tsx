@@ -28,9 +28,9 @@ const events = [
 const StudentLife = () => {
   const isMobile = useGetWindowWidth();
   return (
-    <section className="bg-secondary py-10 w-full">
+    <section className="bg-tertiary py-10 w-full">
       <div className="container space-y-10">
-        <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold text-white">
+        <h2 className="font-primary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold text-primary">
           Student life at Comejuu
         </h2>
 

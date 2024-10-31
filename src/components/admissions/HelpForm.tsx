@@ -39,14 +39,14 @@ const HelpForm = () => {
       />
 
       <Textarea
-        label="Tell us your issue"
+        label="Write us a message"
         placeholder="e.g. Hi, I want to ask about..."
         value={''}
         onChange={() => {}}
         name='message'
       />
 
-      <Button type='submit' className='w-max'>
+      <Button type='submit' className='w-max mt-5'>
         Submit message
         <RiArrowRightLine />
       </Button>

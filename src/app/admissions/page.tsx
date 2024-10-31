@@ -1,19 +1,16 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
 import { events } from "@/data";
 import Dots from "@/components/layout/Dots";
-// import GhostLine from '@/components/GhostLine'
-import Button from "@/components/Button";
-import Req from "@/components/admissions/Req";
-import AdmissionEvent from "@/components/admissions/AdmissionEvent";
-// import HelpForm from '@/components/admissions/HelpForm'
-import ApplicationForm from "@/components/admissions/ApplicationForm";
-import AdmissionStepsTab from "@/components/admissions/AdmissionStepsTab";
-// import ApplicationForm from '@/components/admissions/ApplicationForm'
-// import FeeCard from '@/components/admissions/FeeCard'
-// import CallToAction from '@/components/CallToAction'
+
 import HeroSection from "@/components/HeroSection";
+// Dynamic imports
+const Button = React.lazy(() => import("@/components/Button"));
+const Req = React.lazy(() => import("@/components/admissions/Req"));
+const AdmissionEvent = React.lazy(() => import("@/components/admissions/AdmissionEvent"));
+const ApplicationForm = React.lazy(() => import("@/components/admissions/ApplicationForm"));
+const AdmissionStepsTab = React.lazy(() => import("@/components/admissions/AdmissionStepsTab"));
 
 const Admissions = () => {
   return (
@@ -29,8 +26,9 @@ const Admissions = () => {
         />
 
         {/* REQS */}
-        <div className="container space-y-5">
-          <h3 className="text-xl sm:text-2xl font-light">
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="container space-y-5">
+            <h3 className="text-xl sm:text-2xl font-light">
             Admission requirements
           </h3>
 
@@ -66,7 +64,8 @@ const Admissions = () => {
               description="A copy of your child's birth certificate"
             />
           </div>
-        </div>
+          </div>
+        </Suspense>
 
         <div className="">
           {/* STEPS */}

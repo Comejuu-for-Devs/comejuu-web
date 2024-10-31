@@ -1,15 +1,18 @@
 "use client"
-import React from 'react'
-import Dots from '@/components/layout/Dots'
-import HelpForm from '@/components/admissions/HelpForm'
-import Map from '@/components/map/Map'
+import React, { Suspense } from 'react'
 import HeroSection from '@/components/HeroSection'
 
+// Dynamic imports
+const Dots = React.lazy(() => import('@/components/layout/Dots'));
+const HelpForm = React.lazy(() => import('@/components/admissions/HelpForm'));
+const Map = React.lazy(() => import('@/components/map/Map'));
 
 const Contact = () => {
   return (
     <section className="relative min-h-screen pb-20">
-      <Dots />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Dots />
+      </Suspense>
 
       <div className="space-y-10 sm:space-y-20">
         {/* HERO */}
@@ -62,10 +65,14 @@ const Contact = () => {
           <h2 className="text-xl sm:text-2xl mb-10 font-bold font-secondary">
             For enquiries, get in touch with us.
           </h2>
-          <HelpForm />
+          <Suspense fallback={<div>Loading...</div>}>
+            <HelpForm />
+          </Suspense>
         </div>
       </div>
-      <Map />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Map />
+      </Suspense>
     </section>
   );
 }

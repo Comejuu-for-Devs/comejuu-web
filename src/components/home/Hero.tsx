@@ -1,15 +1,10 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import { RiArrowRightLine } from "react-icons/ri";
-import Carousel from "react-multi-carousel";
+import React, { lazy, Suspense } from "react";
 import "react-multi-carousel/lib/styles.css";
 
-// import Dots from '@/components/layout/Dots'
-import Button from "@/components/Button";
-import ValueCarousel, { ValueSlide } from "@/components/home/ValueCarousel";
+const ValueCarousel = lazy(() => import("@/components/home/ValueCarousel"));
 
-export const values: ValueSlide[] = [
+export const values = [
   {
     title: "Excellence",
     description: "Nurturing minds, fostering growth",
@@ -52,7 +47,9 @@ const Hero = () => {
   return (
     <section className="relative h-[90vh] w-full">
       <div className="absolute inset-0">
-        <ValueCarousel values={values} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ValueCarousel values={values} />
+        </Suspense>
       </div>
     </section>
   );

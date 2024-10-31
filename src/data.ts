@@ -125,7 +125,8 @@ export const excellenceBeyondClassroomItems = [
       ballerina,chess, guitar, scrabble and swimming. We have created a vibrant experience
       that helps them discover their talents, build teamwork skills, develop a love for learning,
       and have a blast! 
-    `
+    `,
+    image: ''
   },
   {
     title: 'Educational Outings & Trips',
@@ -133,7 +134,8 @@ export const excellenceBeyondClassroomItems = [
       We believe in experiential learning and provide opportunities
       for our students to explore the world beyond the classroom through educational outings
       and trips in every school term. 
-    `
+    `,
+    image: ''
   },
   {
     title: 'A Safe and Supportive Environment',
@@ -145,7 +147,8 @@ export const excellenceBeyondClassroomItems = [
       personnel, and a dedicated school nurse. What's more we are located at Kigumo
       Township, within walking distance from a level 4 hospital, police station and market for
       easy access.
-    `
+    `,
+    image: ''
   },
   {
     title: 'A Strong Community Spirit',
@@ -153,7 +156,8 @@ export const excellenceBeyondClassroomItems = [
       We believe in building a strong community where parents,
       teachers, and students work together to create a supportive and enriching learning
       experience.
-    `
+    `,
+    image: ''
   },
 ]
 
@@ -165,7 +169,8 @@ export const approaches = [
       1, and Pre-Primary 2), lower school (grades 1-3), middle
       school (grades 4-6) and junior secondary (grades 7-9) with day
       and boarding options
-    `
+    `,
+    image: ''
   },
   {
     title: 'Academic Excellence',
@@ -176,7 +181,8 @@ export const approaches = [
       excellence every day, delivering a world-class
       Competency-Based Curriculum (C.B.C.) with a focus on critical
       thinking, problem-solving, creativity and real-world application.
-    `
+    `,
+    image: ''
   },
   {
     title: 'Modern Facilities',
@@ -187,6 +193,7 @@ export const approaches = [
       This, coupled with our dedicated and experienced teachers,
       equip our students with the knowledge and skills they need to
       succeed in the 21st century.
-    `
+    `,
+    image: ''
   },
 ]

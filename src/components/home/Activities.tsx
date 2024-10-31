@@ -1,6 +1,5 @@
 import React from 'react'
 import { RiCircleFill } from 'react-icons/ri'
-
 import GhostLine from '@/components/GhostLine'
 import ActivityCard from '@/components/home/ActivityCard'
 import { activities } from '@/data'

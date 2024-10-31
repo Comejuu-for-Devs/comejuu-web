@@ -1,9 +1,12 @@
 "use client";
 import React from 'react'
-import TestimonialCard from '@/components/home/TestimonialCard'
-import GhostLine from "@/components/GhostLine"
+import dynamic from 'next/dynamic';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+// Use dynamic imports for components
+const TestimonialCard = dynamic(() => import('@/components/home/TestimonialCard'));
+const GhostLine = dynamic(() => import('@/components/GhostLine'));
 
 const testimonials = [
   {
@@ -40,7 +43,7 @@ const responsive = {
 
 const Testimonials = () => {
   return (
-    <section className='bg-primary py-16 w-full'>
+    <section className='bg-primary py-10 md:py-16 w-full'>
       <div className="container space-y-14">
         <h2 className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight text-white">
           Parents are happy, so will you be
@@ -58,7 +61,7 @@ const Testimonials = () => {
           transitionDuration={500}
           minimumTouchDrag={100}
           containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
+          removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
           itemClass="px-2 py-2"
         >

@@ -1,15 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Button from "@/components/Button";
 // import Stage from '@/components/curriculum/Stage'
 import Dots from "@/components/layout/Dots";
-import CallToAction from "@/components/CallToAction";
-import CurriculumExcellenceTabs from "@/components/curriculum/CurriculumTabs";
-import ApproachTabs from "@/components/curriculum/ApproachTabs";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import HeroSection from "@/components/HeroSection";
+// Dynamically import components
+const CallToAction = dynamic(() => import("@/components/CallToAction"));
+const CurriculumExcellenceTabs = dynamic(() => import("@/components/curriculum/CurriculumTabs"));
+const ApproachTabs = dynamic(() => import("@/components/curriculum/ApproachTabs"));
+// const HeroSection = dynamic(() => import("@/components/HeroSection"));
 
 const Curriculum = () => {
   const searchParams = useSearchParams();
@@ -227,6 +230,10 @@ const Curriculum = () => {
             </div>
           </div>
         </div>
+        <div className="container mx-auto space-y-6">
+          {/* CALL TO ACTION */}
+          <CallToAction />
+        </div>
 
         {/* EXTRACURRICULAR */}
         <div id="extracurricular-container" className="container space-y-6">
@@ -271,9 +278,6 @@ const Curriculum = () => {
 
           <CurriculumExcellenceTabs />
         </div>
-
-        {/* CALL TO ACTION */}
-        <CallToAction />
       </div>
     </section>
   );
