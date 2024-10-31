@@ -1,4 +1,5 @@
 // import Activities from "@/components/home/Activities";
+import Banner from "@/components/home/Banner";
 import Hero from "@/components/home/Hero";
 import NewsEvents from "@/components/home/NewsEvents";
 import Stages from "@/components/home/Stages";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <section className="relative">
       <Dots />
+      <Banner />
       <Hero />
       <Stages />
       {/* <Activities /> */}

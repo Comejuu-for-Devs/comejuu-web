@@ -69,16 +69,16 @@ const ApplicationForm = () => {
         onChange={() => {}}
         name='email'
       />
-
+{/* 
       <Textarea
         label="Tell us your issue"
         placeholder="e.g. Hi, I want to ask about..."
         value={''}
         onChange={() => {}}
         name='message'
-      />
+      /> */}
 
-      <Button type='submit' className='w-max'>
+      <Button type='submit' className='w-max mt-5'>
         Submit application
         <RiArrowRightLine />
       </Button>

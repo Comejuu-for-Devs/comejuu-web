@@ -1,23 +1,16 @@
-"use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
-
 import { events } from "@/data";
-
 import Dots from "@/components/layout/Dots";
-// import GhostLine from '@/components/GhostLine'
-import Button from "@/components/Button";
-import Image from "next/image";
-import Req from "@/components/admissions/Req";
-import AdmissionEvent from "@/components/admissions/AdmissionEvent";
-// import HelpForm from '@/components/admissions/HelpForm'
-import ApplicationForm from "@/components/admissions/ApplicationForm";
-import AdmissionStepsTab from "@/components/admissions/AdmissionStepsTab";
-// import ApplicationForm from '@/components/admissions/ApplicationForm'
-// import FeeCard from '@/components/admissions/FeeCard'
-// import CallToAction from '@/components/CallToAction'
-import ApplyNowButton from "@/components/ApplyNowButton";
+
+import HeroSection from "@/components/HeroSection";
+// Dynamic imports
+const Button = React.lazy(() => import("@/components/Button"));
+const Req = React.lazy(() => import("@/components/admissions/Req"));
+const AdmissionEvent = React.lazy(() => import("@/components/admissions/AdmissionEvent"));
+const ApplicationForm = React.lazy(() => import("@/components/admissions/ApplicationForm"));
+const AdmissionStepsTab = React.lazy(() => import("@/components/admissions/AdmissionStepsTab"));
 
 const Admissions = () => {
   return (
@@ -26,36 +19,16 @@ const Admissions = () => {
 
       <div className="space-y-10 sm:space-y-20">
         {/* HERO */}
-        <div className="relative w-full h-[60vh]">
-          <Image
-            width={1920}
-            height={1280}
-            src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-            className="asbolute w-full h-full object-cover rounded-xl"
-          />
-
-          <div className="absolute top-0 bg-black/80 h-full w-full z-10">
-            <div className="container py-20 h-full flex flex-col gap-10 justify-center">
-              <h1 className="font-secondary text-4xl w-full  sm:text-6xl font-black tracking-tight text-white">
-                Where Your Child&apos;s Future Takes Flight With Confidence
-              </h1>
-
-              <ApplyNowButton
-                text="Fill Admission Form"
-                onClick={() => {
-                  document
-                    .getElementById("admissionForm")
-                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-              />
-            </div>
-          </div>
-        </div>
+        <HeroSection
+          title="Where Your Child&apos;s Future Takes Flight With Confidence"
+          buttonText="Fill Admission Form"
+          buttonLink="#admissionForm"
+        />
 
         {/* REQS */}
-        <div className="container space-y-5">
-          <h3 className="text-xl sm:text-2xl font-light">
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="container space-y-5">
+            <h3 className="text-xl sm:text-2xl font-light">
             Admission requirements
           </h3>
 
@@ -91,7 +64,8 @@ const Admissions = () => {
               description="A copy of your child's birth certificate"
             />
           </div>
-        </div>
+          </div>
+        </Suspense>
 
         <div className="">
           {/* STEPS */}

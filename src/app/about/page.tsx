@@ -1,47 +1,36 @@
-"use client";
-import React from "react";
-import Image from "next/image";
+import React, { Suspense } from "react";
 import { RiDoubleQuotesL } from "react-icons/ri";
-
-import Dots from "@/components/layout/Dots";
-import StaffCard from "@/components/about/StaffCard";
-// import CommunityCard from '@/components/about/CommunityCard'
-import CallToAction from "@/components/CallToAction";
-import ApplyNowButton from "@/components/ApplyNowButton";
-import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+import HeroSection from "@/components/HeroSection";
+// Use dynamic imports for components
+const Dots = dynamic(() => import("@/components/layout/Dots"), {
+  suspense: true,
+});
+const StaffCard = dynamic(() => import("@/components/about/StaffCard"), {
+  suspense: true,
+});
+const CallToAction = dynamic(() => import("@/components/CallToAction"), {
+  suspense: true,
+});
+// const HeroSection = dynamic(() => import('@/components/HeroSection'), { suspense: true });
 
 const About = () => {
-  const router = useRouter();
   return (
     <section className="min-h-screen pb-20 relative">
-      <Dots />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Dots />
+      </Suspense>
 
       <div className="space-y-10 sm:space-y-20">
         <div className="">
           {/* HERO */}
-          <div className="relative w-full h-[60vh]">
-            <Image
-              width={1920}
-              height={1280}
-              src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-              className="asbolute w-full h-full object-cover"
+         
+            <HeroSection
+              title="Where Your Child's Future Takes Flight With Confidence"
+              buttonText="Fill Admission Form"
+              buttonLink="/admissions"
             />
-
-            <div className="absolute top-0 bg-black/80 h-full w-full z-10">
-              <div className="container py-20 h-full flex flex-col gap-10 justify-center">
-                <h1 className="font-secondary text-4xl w-full  sm:text-6xl font-black tracking-tight text-white">
-                  Where Your Child&apos;s Future Takes Flight With Confidence
-                </h1>
-
-                <ApplyNowButton
-                  onClick={() => {
-                    router.push(`/admissions`);
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+          
 
           {/* MESSAGES */}
           <div className="pt-10">
@@ -86,7 +75,9 @@ const About = () => {
             </div>
           </div>
         </div>
-
+        <Suspense fallback={<div>Loading Call to Action...</div>}>
+          <CallToAction />
+        </Suspense>
         {/* OUR STAFF */}
         <div className="bg-primary py-16">
           <div className="container space-y-10">
@@ -98,27 +89,44 @@ const About = () => {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
-              <StaffCard
-                name="John Doe"
-                role="Teacher"
-                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <StaffCard
-                name="John Doe"
-                role="Lab assistant"
-                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <StaffCard
-                name="John Doe"
-                role="Guitar teacher"
-                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <StaffCard
-                name="John Doe"
-                role="Grounds keeper"
-                img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
+              <Suspense fallback={<div>Loading Staff...</div>}>
+                <StaffCard
+                  name="John Doe"
+                  role="Teacher"
+                  img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+                <StaffCard
+                  name="John Doe"
+                  role="Lab assistant"
+                  img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+                <StaffCard
+                  name="John Doe"
+                  role="Guitar teacher"
+                  img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+                <StaffCard
+                  name="John Doe"
+                  role="Grounds keeper"
+                  img="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </Suspense>
             </div>
+          </div>
+          {/* LOREM IPSUM SECTION */}
+          <div className="container pt-10">
+            <h2 className="text-white text-2xl sm:text-3xl font-bold">
+              Lorem Ipsum
+            </h2>
+            <p className="text-base mt-5 sm:text-lg font-light text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
           </div>
         </div>
 
@@ -154,9 +162,6 @@ const About = () => {
             </div>
           </div>
         </div> */}
-
-        {/* CALL TO ACTION */}
-        <CallToAction />
       </div>
     </section>
   );

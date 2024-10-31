@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { getDate } from '@/utils/helpers'
-import Link from 'next/link'
 
 type EventCardProps = {
   title: string
@@ -21,7 +19,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, time }) => {
       <div className="px-3 pb-3">
         <h5 className="text-primary font-bold text-xl">{title}</h5>
         <p className="text-neutral-dark text-base">{time}</p>
-        <Link href='/' className='text-sm underline'>Learn more</Link>
+        {/* <Link href='/' className='text-sm underline'>Learn more</Link> */}
       </div>
     </div>
   )

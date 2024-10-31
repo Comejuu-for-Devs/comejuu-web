@@ -2,10 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { RiCloseLine } from 'react-icons/ri'
-
+import { usePathname} from 'next/navigation';
 import Button from '@/components/Button'
 import Navlink from '@/components/layout/Navlink'
-
 import logo from '@/assets/logo.png'
 
 type MenuProps = {
@@ -14,6 +13,9 @@ type MenuProps = {
 }
 
 const Menu: React.FC<MenuProps> = ({ open, setOpen }) => {
+  const pathname = usePathname();
+  const isActive = (url: string) => pathname === url;
+
   return (
     <div
       className={`fixed top-0 left-0 w-full h-screen z-50 bg-white/20 backdrop-blur
@@ -45,12 +47,12 @@ const Menu: React.FC<MenuProps> = ({ open, setOpen }) => {
           </div>
 
           <div className="flex flex-col gap-3" onClick={() => setOpen(false)}>
-            <Navlink name='Home' url='/' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
-            <Navlink name='About Comejuu' url='/about' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
-            <Navlink name='Curriculum' url='/curriculum' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
-            <Navlink name='Admissions' url='/admissions' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
-            <Navlink name='Media Room' url='/mediaroom' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
-            <Navlink name='Contact' url='/contact' classNames='text-gray-50 hover:text-tertiary border-none p-0' />
+            <Navlink name='Home' url='/' classNames={`text-gray-50 hover:text-tertiary border-none p-0 ${isActive('/') ? 'text-tertiary' : ''}`} />
+            <Navlink name='About Comejuu' url='/about' classNames={`text-gray-50 hover:text-tertiary border-none p-0 ${isActive('/about') ? 'text-tertiary' : ''}`} />
+            <Navlink name='Curriculum' url='/curriculum' classNames={`text-gray-50 hover:text-tertiary border-none p-0 ${isActive('/curriculum') ? 'text-tertiary' : ''}`} />
+            <Navlink name='Admissions' url='/admissions' classNames={`text-gray-50 hover:text-tertiary border-none p-0 ${isActive('/admissions') ? 'text-tertiary' : ''}`} />
+            <Navlink name='Media Room' url='/mediaroom' classNames={`text-gray-50 hover:text-tertiary border-none p-0 ${isActive('/mediaroom') ? 'text-tertiary' : ''}`} />
+            <Navlink name='Contact' url='/contact' classNames={`text-gray-50 hover:text-tertiary border-none p-0 ${isActive('/contact') ? 'text-tertiary' : ''}`} />
           </div>
         </div>
       </div>

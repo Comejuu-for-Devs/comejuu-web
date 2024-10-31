@@ -23,22 +23,6 @@ const HelpForm = () => {
       />
 
       <Input
-        label="Your child's name *"
-        placeholder="e.g. John Doe Jr"
-        value={''}
-        onChange={() => {}}
-        name='childName'
-      />
-
-      <Input
-        label="Your child's current grade *"
-        placeholder="e.g. 1"
-        value={''}
-        onChange={() => {}}
-        name='grade'
-      />
-
-      <Input
         label="Your phone number *"
         placeholder="e.g. 07XXXXXXXX"
         value={''}
@@ -55,14 +39,14 @@ const HelpForm = () => {
       />
 
       <Textarea
-        label="Tell us your issue"
+        label="Write us a message"
         placeholder="e.g. Hi, I want to ask about..."
         value={''}
         onChange={() => {}}
         name='message'
       />
 
-      <Button type='submit' className='w-max'>
+      <Button type='submit' className='w-max mt-5'>
         Submit message
         <RiArrowRightLine />
       </Button>

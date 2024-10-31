@@ -22,12 +22,12 @@ export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({ title, img, li
           className="transition-transform duration-300 hover:scale-110"
         />
       </div>
-      <h3 className="text-xl font-semibold">{title}</h3>
+      <h3 className="text-xl text-primary font-semibold">{title}</h3>
       <Link
         href={link}
         // legacyBehavior
         scroll={true}
-        className="inline-flex items-center text-sm font-semibold text-tertiary hover:underline"
+        className="inline-flex items-center underline text-sm font-semibold text-secondary hover:underline"
       >
         <span>{linkTitle}</span>
         <HiOutlineArrowNarrowRight className="ml-2" />

@@ -25,30 +25,12 @@ const events = [
   },
 ];
 
-// const responsive = {
-//   desktop: {
-//     breakpoint: { max: 3000, min: 1024 },
-//     items: 3,
-//     slidesToSlide: 1,
-//   },
-//   tablet: {
-//     breakpoint: { max: 1024, min: 464 },
-//     items: 2,
-//     slidesToSlide: 1,
-//   },
-//   mobile: {
-//     breakpoint: { max: 464, min: 0 },
-//     items: 1,
-//     slidesToSlide: 1,
-//   },
-// };
-
 const StudentLife = () => {
   const isMobile = useGetWindowWidth();
   return (
-    <section className="bg-secondary py-10 w-full">
+    <section className="bg-tertiary py-10 w-full">
       <div className="container space-y-10">
-        <h2 className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold text-white">
+        <h2 className="font-primary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold text-primary">
           Student life at Comejuu
         </h2>
 
