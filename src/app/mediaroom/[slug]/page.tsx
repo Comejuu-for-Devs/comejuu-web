@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LikeButton from "./components/LikeButton";
 import CommentsSection from "./components/CommentsSection";
 
