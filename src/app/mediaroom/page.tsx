@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Dots from "@/components/layout/Dots";
 import Image from "next/image";
 import TopSection from "./components/topSection";

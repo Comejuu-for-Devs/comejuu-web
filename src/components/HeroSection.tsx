@@ -4,7 +4,7 @@ import React from 'react'
 import ApplyNowButton from './ApplyNowButton';
 import { useRouter } from 'next/navigation';
 
-const HeroSection = ({ title, buttonText, buttonLink }: { title: string, buttonText?: string, buttonLink: string }) => {
+const HeroSection = ({ title, buttonLink }: { title: string, buttonText?: string, buttonLink: string }) => {
   const router = useRouter();
   return (
     <div className="relative w-full h-[60vh]">
