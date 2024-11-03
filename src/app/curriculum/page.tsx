@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Button from "@/components/Button";
-// import Stage from '@/components/curriculum/Stage'
 import Dots from "@/components/layout/Dots";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
