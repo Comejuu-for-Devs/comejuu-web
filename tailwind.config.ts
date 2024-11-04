@@ -18,12 +18,12 @@ const config: Config = {
         "neutral-dark": "var(--neutral-dark)",
       },
       fontFamily: {
-        "primary": ["var(--font-primary)"],
-        "secondary": ["var(--font-secondary)"],
+        primary: ["var(--font-primary)"],
+        secondary: ["var(--font-secondary)"],
       },
       screens: {
-        'xs': '480px'
-      }
+        xs: "480px",
+      },
     },
   },
   plugins: [],

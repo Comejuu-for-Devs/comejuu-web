@@ -1,19 +1,14 @@
-import Image, { StaticImageData } from 'next/image'
-import React from 'react'
+import Image, { StaticImageData } from "next/image";
+import React from "react";
 
 type StaffCardProps = {
-  name?: string
-  img: StaticImageData
-  role: string
-  description?: string
-}
+  name?: string;
+  img: StaticImageData;
+  role: string;
+  description?: string;
+};
 
-const StaffCard = ({
-  name,
-  img,
-  role,
-  description
-}: StaffCardProps) => {
+const StaffCard = ({ name, img, role, description }: StaffCardProps) => {
   return (
     <div className="space-y-2 overflow-hidden rounded-2xl">
       <Image
@@ -33,6 +28,6 @@ const StaffCard = ({
       </div>
     </div>
   );
-}
+};
 
-export default StaffCard
+export default StaffCard;

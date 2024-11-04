@@ -4,16 +4,22 @@ import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
 import { events } from "@/data";
 import Dots from "@/components/layout/Dots";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import HeroSection from "@/components/HeroSection";
 // Dynamic imports
 const Button = React.lazy(() => import("@/components/Button"));
 const Req = React.lazy(() => import("@/components/admissions/Req"));
-const AdmissionEvent = React.lazy(() => import("@/components/admissions/AdmissionEvent"));
-const ApplicationForm = React.lazy(() => import("@/components/admissions/ApplicationForm"));
-const AdmissionStepsTab = React.lazy(() => import("@/components/admissions/AdmissionStepsTab"));
+const AdmissionEvent = React.lazy(
+  () => import("@/components/admissions/AdmissionEvent"),
+);
+const ApplicationForm = React.lazy(
+  () => import("@/components/admissions/ApplicationForm"),
+);
+const AdmissionStepsTab = React.lazy(
+  () => import("@/components/admissions/AdmissionStepsTab"),
+);
 import SchoolFront from "../../../public/images/admissions/school_front.jpg";
 
 const Admissions = () => {

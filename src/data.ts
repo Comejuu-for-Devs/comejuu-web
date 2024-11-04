@@ -7,133 +7,139 @@ import EducationalOutings from "../public/images/curriculum/educational_outings.
 import SafeEnvironment from "../public/images/curriculum/supportive_environment.jpg";
 export const activities = [
   {
-    name: 'Netball',
-    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`
+    name: "Netball",
+    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`,
   },
   {
-    name: 'Handball',
-    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`
+    name: "Handball",
+    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`,
   },
   {
-    name: 'Football',
-    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`
+    name: "Football",
+    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`,
   },
   {
-    name: 'Volleyball',
-    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`
+    name: "Volleyball",
+    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`,
   },
   {
-    name: 'Athletics',
-    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`
+    name: "Athletics",
+    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`,
   },
   {
-    name: 'Music',
-    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`
+    name: "Music",
+    description: `Our extracurriculars foster well-rounded students by encouraging growth, leadership, and teamwork through sports, arts, and clubs.`,
   },
-]
+];
 
 export const events = [
   {
-    title: 'School Opening Day',
-    date: '07 January 2025',
-    action: 'Find Out More',
-    link: '/contact?section=contactform&event=School Opening Day'
+    title: "School Opening Day",
+    date: "07 January 2025",
+    action: "Find Out More",
+    link: "/contact?section=contactform&event=School Opening Day",
   },
   {
-    title: 'Mid-Term Exams',
-    date: '29 January 2025',
-    action: 'Find Out More',
-    link: '/contact?section=contactform&event=Mid-Term Exams'
+    title: "Mid-Term Exams",
+    date: "29 January 2025",
+    action: "Find Out More",
+    link: "/contact?section=contactform&event=Mid-Term Exams",
   },
   {
-    title: 'Parents Visiting Day',
-    date: '23 February 2025',
-    action: 'Find Out More',
-    link: '/contact?section=contactform&event=Parents Visiting Day'
+    title: "Parents Visiting Day",
+    date: "23 February 2025",
+    action: "Find Out More",
+    link: "/contact?section=contactform&event=Parents Visiting Day",
   },
   {
-    title: 'Interschool Talents Day',
-    date: '03 March 2025',
-    action: 'Find Out More',
-    link: '/contact?section=contactform&event=Interschool Talents Day'
+    title: "Interschool Talents Day",
+    date: "03 March 2025",
+    action: "Find Out More",
+    link: "/contact?section=contactform&event=Interschool Talents Day",
   },
-]
+];
 
 export const values = [
   {
-    name: 'Excellence',
-    description: 'At Comejuu Premier Academy, we strive for excellence in everything we do, inspiring our students to reach their full potential and aim high.'
+    name: "Excellence",
+    description:
+      "At Comejuu Premier Academy, we strive for excellence in everything we do, inspiring our students to reach their full potential and aim high.",
   },
   {
-    name: 'Integrity',
-    description: 'Honesty and integrity are at the heart of our community, guiding our students to be trustworthy and responsible individuals'
+    name: "Integrity",
+    description:
+      "Honesty and integrity are at the heart of our community, guiding our students to be trustworthy and responsible individuals",
   },
   {
-    name: 'Respect',
-    description: 'We foster a culture of respect for all, where everyone feels valued and appreciated, creating a harmonious learning environment'
+    name: "Respect",
+    description:
+      "We foster a culture of respect for all, where everyone feels valued and appreciated, creating a harmonious learning environment",
   },
   {
-    name: 'Compassion',
-    description: 'We encourage our students to be kind and caring, developing empathy and understanding for others.'
+    name: "Compassion",
+    description:
+      "We encourage our students to be kind and caring, developing empathy and understanding for others.",
   },
   {
-    name: 'Responsibility',
-    description: 'We empower our students to take ownership of their actions and decisions, fostering a sense of'
+    name: "Responsibility",
+    description:
+      "We empower our students to take ownership of their actions and decisions, fostering a sense of",
   },
   {
-    name: 'Curiosity',
-    description: 'We nurture a love for learning and encourage our students to be inquisitive and explore the world around them with an open mind.'
+    name: "Curiosity",
+    description:
+      "We nurture a love for learning and encourage our students to be inquisitive and explore the world around them with an open mind.",
   },
-]
+];
 
 export const admissionSteps = [
   {
     stepNo: 1,
-    title: 'Apply',
+    title: "Apply",
     description: `
       Complete the online application form and submit all required documents, including previous school records and a personal statement.
     `,
   },
   {
     stepNo: 2,
-    title: 'Entrance Assessment',
+    title: "Entrance Assessment",
     description: `
       Schedule and complete the required entrance assessment to evaluate academic readiness.
     `,
   },
   {
     stepNo: 3,
-    title: 'Interview (For Junior High Applicants)',
+    title: "Interview (For Junior High Applicants)",
     description: `
       Junior high applicants may be invited for an interview with the admissions team or school director.
     `,
   },
   {
     stepNo: 4,
-    title: 'Decision Notification',
+    title: "Decision Notification",
     description: `
       After reviewing the application and assessment, the admissions office will notify you of the decision.
     `,
   },
   {
     stepNo: 5,
-    title: 'Enrollment & Registration',
+    title: "Enrollment & Registration",
     description: `
       Upon acceptance, complete the enrollment form and submit any additional required documentation. Secure your child’s spot by paying the registration fee.
     `,
   },
   {
     stepNo: 6,
-    title: 'Orientation & Welcome',
+    title: "Orientation & Welcome",
     description: `
       Attend the new student orientation to help your child transition smoothly into the school community.
     `,
   },
-]
+];
 
 export const excellenceBeyondClassroomItems = [
   {
-    title: 'Holistic Development',
+    title: "Holistic Development",
     description: `
       We offer a diverse range of extracurricular activities to ignite the
       passion of the students, including sports, drama and talent development in
@@ -141,19 +147,19 @@ export const excellenceBeyondClassroomItems = [
       that helps them discover their talents, build teamwork skills, develop a love for learning,
       and have a blast! 
     `,
-    image: HolisticDevelopment
+    image: HolisticDevelopment,
   },
   {
-    title: 'Educational Outings & Trips',
+    title: "Educational Outings & Trips",
     description: `
       We believe in experiential learning and provide opportunities
       for our students to explore the world beyond the classroom through educational outings
       and trips in every school term. 
     `,
-    image: EducationalOutings
+    image: EducationalOutings,
   },
   {
-    title: 'A Safe and Supportive Environment',
+    title: "A Safe and Supportive Environment",
     description: `
       Ours is a safe and secure environment where your
       child can learn and grow, with a focus on their social, psychological, and emotional
@@ -163,32 +169,32 @@ export const excellenceBeyondClassroomItems = [
       Township, within walking distance from a level 4 hospital, police station and market for
       easy access.
     `,
-    image: SafeEnvironment
+    image: SafeEnvironment,
   },
   {
-    title: 'A Strong Community Spirit',
+    title: "A Strong Community Spirit",
     description: `
       We believe in building a strong community where parents,
       teachers, and students work together to create a supportive and enriching learning
       experience.
     `,
-    image: PracticalAgriculture
+    image: PracticalAgriculture,
   },
-]
+];
 
 export const approaches = [
   {
-    title: 'Curriculum',
+    title: "Curriculum",
     description: `
       We provide preschool (Play-group, Pre-Primary
       1, and Pre-Primary 2), lower school (grades 1-3), middle
       school (grades 4-6) and junior secondary (grades 7-9) with day
       and boarding options
     `,
-    image: CurriculumImage
+    image: CurriculumImage,
   },
   {
-    title: 'Academic Excellence',
+    title: "Academic Excellence",
     description: `
       Comejuu Premier Academy has a
       20-year track record of academic success and strong
@@ -197,10 +203,10 @@ export const approaches = [
       Competency-Based Curriculum (C.B.C.) with a focus on critical
       thinking, problem-solving, creativity and real-world application.
     `,
-    image: AcademicExcellence
+    image: AcademicExcellence,
   },
   {
-    title: 'Modern Facilities',
+    title: "Modern Facilities",
     description: `
       Our school boasts spacious classrooms,
       a well-equipped library, a modern science laboratory, a library,
@@ -209,6 +215,6 @@ export const approaches = [
       equip our students with the knowledge and skills they need to
       succeed in the 21st century.
     `,
-    image: ModernFacilities
+    image: ModernFacilities,
   },
-]
+];

@@ -11,10 +11,10 @@ import HeroSection from "@/components/HeroSection";
 // Dynamically import components
 const CallToAction = dynamic(() => import("@/components/CallToAction"));
 const CurriculumExcellenceTabs = dynamic(
-  () => import("@/components/curriculum/CurriculumTabs")
+  () => import("@/components/curriculum/CurriculumTabs"),
 );
 const ApproachTabs = dynamic(
-  () => import("@/components/curriculum/ApproachTabs")
+  () => import("@/components/curriculum/ApproachTabs"),
 );
 // const HeroSection = dynamic(() => import("@/components/HeroSection"));
 import AgricultureHarvest from "../../../public/images/curriculum/agriculture_harvest.jpg";

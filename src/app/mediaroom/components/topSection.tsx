@@ -1,7 +1,7 @@
-'use client'
-import ApplyNowButton from '@/components/ApplyNowButton';
-import React from 'react'
-import { useRouter } from 'next/navigation';
+"use client";
+import ApplyNowButton from "@/components/ApplyNowButton";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 const TopSection = () => {
   const router = useRouter();
@@ -19,6 +19,6 @@ const TopSection = () => {
       </div>
     </div>
   );
-}
+};
 
-export default TopSection
+export default TopSection;

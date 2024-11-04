@@ -1,7 +1,7 @@
-import { RiErrorWarningLine } from "react-icons/ri"
+import { RiErrorWarningLine } from "react-icons/ri";
 
 interface ErrorMsgProps {
-  msg: string
+  msg: string;
 }
 
 const ErrorMsg = ({ msg }: ErrorMsgProps) => {
@@ -10,11 +10,9 @@ const ErrorMsg = ({ msg }: ErrorMsgProps) => {
       <span className="">
         <RiErrorWarningLine />
       </span>
-      <span className="text-xs font-medium">
-        {msg}
-      </span>
+      <span className="text-xs font-medium">{msg}</span>
     </div>
-  )
-}
+  );
+};
 
-export default ErrorMsg
+export default ErrorMsg;

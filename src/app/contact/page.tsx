@@ -1,22 +1,23 @@
-"use client"
-import React, { Suspense, useEffect, useState } from 'react'
-import HeroSection from '@/components/HeroSection'
-import { useSearchParams } from 'next/dist/client/components/navigation';
+"use client";
+import React, { Suspense, useEffect, useState } from "react";
+import HeroSection from "@/components/HeroSection";
+import { useSearchParams } from "next/dist/client/components/navigation";
 
 // Dynamic imports
-const Dots = React.lazy(() => import('@/components/layout/Dots'));
-const HelpForm = React.lazy(() => import('@/components/admissions/HelpForm'));
-const Map = React.lazy(() => import('@/components/map/Map'));
+const Dots = React.lazy(() => import("@/components/layout/Dots"));
+const HelpForm = React.lazy(() => import("@/components/admissions/HelpForm"));
+const Map = React.lazy(() => import("@/components/map/Map"));
 
 const Contact = () => {
-  
   const searchParams = useSearchParams();
-  const event = searchParams?.get('event');
-  const [prepopulatedText, setPrepopulatedText] = useState('');
+  const event = searchParams?.get("event");
+  const [prepopulatedText, setPrepopulatedText] = useState("");
 
   useEffect(() => {
     if (event) {
-      setPrepopulatedText(`Hello, I would like to know more about the ${event} event.`);
+      setPrepopulatedText(
+        `Hello, I would like to know more about the ${event} event.`,
+      );
     }
   }, [event]);
 
@@ -114,6 +115,6 @@ const Contact = () => {
       </Suspense>
     </section>
   );
-}
+};
 
-export default Contact
+export default Contact;

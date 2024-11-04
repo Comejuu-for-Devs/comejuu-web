@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import React, { useRef } from 'react'
-import { RiArrowRightLine } from 'react-icons/ri'
+import React, { useRef } from "react";
+import { RiArrowRightLine } from "react-icons/ri";
 
-import Input from '@/components/Input'
-import Textarea from '@/components/Textarea'
-import Button from '@/components/Button'
+import Input from "@/components/Input";
+import Textarea from "@/components/Textarea";
+import Button from "@/components/Button";
 
-interface HelpFormProps { 
-  prepopulatedText?: string
+interface HelpFormProps {
+  prepopulatedText?: string;
 }
 
 const HelpForm = ({ prepopulatedText }: HelpFormProps) => {
@@ -19,52 +19,52 @@ const HelpForm = ({ prepopulatedText }: HelpFormProps) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     const name = nameRef.current?.value;
     const phone = phoneRef.current?.value;
     const email = emailRef.current?.value;
     const message = messageRef.current?.value;
 
     console.log({ name, phone, email, message });
-  }
+  };
 
   return (
-    <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <Input
-        label='Your name *'
-        placeholder='e.g. John Doe'
+        label="Your name *"
+        placeholder="e.g. John Doe"
         ref={nameRef}
-        name='parentName'
+        name="parentName"
       />
 
       <Input
         label="Your phone number *"
         placeholder="e.g. 07XXXXXXXX"
         ref={phoneRef}
-        name='phone'
+        name="phone"
       />
 
       <Input
         label="Your email"
         placeholder="e.g. johndoe@email.com"
         ref={emailRef}
-        name='email'
+        name="email"
       />
 
       <Textarea
         label="Write us a message"
         placeholder="e.g. Hi, I want to ask about..."
         ref={messageRef}
-        value={prepopulatedText || ''}
-        name='message'
+        value={prepopulatedText || ""}
+        name="message"
       />
 
-      <Button type='submit' className='w-max mt-5'>
+      <Button type="submit" className="w-max mt-5">
         Submit message
         <RiArrowRightLine />
       </Button>
     </form>
-  )
-}
+  );
+};
 
-export default HelpForm
+export default HelpForm;

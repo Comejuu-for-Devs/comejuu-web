@@ -45,7 +45,7 @@ const events = [
     date: "June, 10 2024",
     img: School_Transport,
     navId: "extracurricular-container",
-  }
+  },
 ];
 
 const StudentLife = () => {
@@ -63,9 +63,7 @@ const StudentLife = () => {
           }
         >
           <div
-            className={`grid ${
-              isMobile ? "grid-cols-1" : "grid-cols-3"
-            } gap-5`}
+            className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-5`}
           >
             {events.map((event, i) => (
               <div key={i} className="w-full">

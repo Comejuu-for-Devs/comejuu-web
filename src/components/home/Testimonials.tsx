@@ -7,7 +7,7 @@ import { RiCircleFill } from "react-icons/ri";
 
 // Use dynamic imports for components
 const TestimonialCard = dynamic(
-  () => import("@/components/home/TestimonialCard")
+  () => import("@/components/home/TestimonialCard"),
 );
 const GhostLine = dynamic(() => import("@/components/GhostLine"));
 

@@ -3,7 +3,11 @@ import React, { lazy, Suspense } from "react";
 import { useRouter } from "next/navigation";
 
 const Button = lazy(() => import("../Button"));
-const RiArrowRightLine = lazy(() => import("react-icons/ri").then(module => ({ default: module.RiArrowRightLine })));
+const RiArrowRightLine = lazy(() =>
+  import("react-icons/ri").then((module) => ({
+    default: module.RiArrowRightLine,
+  })),
+);
 
 const Banner = () => {
   const router = useRouter();
