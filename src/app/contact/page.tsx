@@ -2,7 +2,8 @@
 import React, { Suspense, useEffect, useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import { useSearchParams } from "next/dist/client/components/navigation";
-
+import Image from "next/image";
+import ContactImage from "../../../public/images/curriculum/curriculum.jpg";
 // Dynamic imports
 const Dots = React.lazy(() => import("@/components/layout/Dots"));
 const HelpForm = React.lazy(() => import("@/components/admissions/HelpForm"));
@@ -56,6 +57,7 @@ const Contact = () => {
         {/* HERO */}
         <HeroSection
           title="Enrol your child in a school where character and excellence bloom!"
+          img={ContactImage}
           buttonText="Fill Admission Form"
           buttonLink="#admissionForm"
         />
