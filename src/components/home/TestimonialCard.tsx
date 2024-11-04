@@ -1,5 +1,4 @@
 import React from "react";
-import { RiUserLine } from "react-icons/ri";
 
 type TestimonialProps = {
   content: string;
