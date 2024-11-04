@@ -3,24 +3,47 @@ import React from "react";
 import "react-multi-carousel/lib/styles.css";
 import { StudentLifeCard } from "./StudentLifeCard";
 import { useGetWindowWidth } from "@/hooks/useGetWindowWidth";
-
+import Sports from "../../../public/images/student_life/sports.jpg";
+import Physical_Education from "../../../public/images/student_life/physical_education.jpg";
+import Music from "../../../public/images/student_life/music.jpg";
+import Wholesome_Meals from "../../../public/images/student_life/wholesome_meals.jpg";
+import School_Transport from "../../../public/images/student_life/school_transport.jpg";
+import Board_Games from "../../../public/images/student_life/board_games.jpg";
 const events = [
   {
-    title: "Sports & Physical Education",
+    title: "Physical Education",
     date: "April, 1 2024",
-    img: "https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: Physical_Education,
     navId: "extracurricular-container",
   },
   {
-    title: "Talent Development",
+    title: "Sports",
     date: "April, 20 2024",
-    img: "https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: Sports,
     navId: "extracurricular-container",
   },
   {
-    title: "Pastoral Care",
+    title: "Board Games",
     date: "May, 6 2024",
-    img: "https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: Board_Games,
+    navId: "extracurricular-container",
+  },
+  {
+    title: "Music",
+    date: "May, 15 2024",
+    img: Music,
+    navId: "extracurricular-container",
+  },
+  {
+    title: "Wholesome Meals",
+    date: "May, 30 2024",
+    img: Wholesome_Meals,
+    navId: "extracurricular-container",
+  },
+  {
+    title: "School Transport",
+    date: "June, 10 2024",
+    img: School_Transport,
     navId: "extracurricular-container",
   },
 ];
@@ -30,14 +53,20 @@ const StudentLife = () => {
   return (
     <section className="bg-tertiary py-10 w-full">
       <div className="container space-y-10">
-        <h2 className="font-primary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold text-primary">
-          Student life at Comejuu
+        <h2 className="font-primary text-2xl md:text-3xl w-full  font-bold text-primary">
+          Student life at Comejuu is vibrant and holistic
         </h2>
 
-        <div className={isMobile ? "overflow-x-auto -mx-4 px-4" : "overflow-x-hidden"}>
-          <div className={`flex ${isMobile ? 'flex-col' : 'justify-center items-center'} gap-5`}>
+        <div
+          className={
+            isMobile ? "overflow-x-auto -mx-4 px-4" : "overflow-x-hidden"
+          }
+        >
+          <div
+            className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-5`}
+          >
             {events.map((event, i) => (
-              <div key={i} className={isMobile ? "w-full" : "w-1/3"}>
+              <div key={i} className="w-full">
                 <StudentLifeCard
                   title={event.title}
                   img={event.img}

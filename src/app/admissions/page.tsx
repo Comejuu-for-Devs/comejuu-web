@@ -1,18 +1,55 @@
+"use client";
 import React, { Suspense } from "react";
 import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
 import { events } from "@/data";
 import Dots from "@/components/layout/Dots";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import HeroSection from "@/components/HeroSection";
 // Dynamic imports
 const Button = React.lazy(() => import("@/components/Button"));
 const Req = React.lazy(() => import("@/components/admissions/Req"));
-const AdmissionEvent = React.lazy(() => import("@/components/admissions/AdmissionEvent"));
-const ApplicationForm = React.lazy(() => import("@/components/admissions/ApplicationForm"));
-const AdmissionStepsTab = React.lazy(() => import("@/components/admissions/AdmissionStepsTab"));
+const AdmissionEvent = React.lazy(
+  () => import("@/components/admissions/AdmissionEvent"),
+);
+const ApplicationForm = React.lazy(
+  () => import("@/components/admissions/ApplicationForm"),
+);
+const AdmissionStepsTab = React.lazy(
+  () => import("@/components/admissions/AdmissionStepsTab"),
+);
+import SchoolFront from "../../../public/images/admissions/school_front.jpg";
 
 const Admissions = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1600 },
+      items: 3,
+    },
+    largeDesktop: {
+      breakpoint: { max: 1600, min: 1280 },
+      items: 3,
+    },
+    laptop: {
+      breakpoint: { max: 1280, min: 1024 },
+      items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    largeMobile: {
+      breakpoint: { max: 768, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <section className="min-h-screen">
       <Dots />
@@ -20,7 +57,8 @@ const Admissions = () => {
       <div className="space-y-10 sm:space-y-20">
         {/* HERO */}
         <HeroSection
-          title="Where Your Child&apos;s Future Takes Flight With Confidence"
+          img={SchoolFront}
+          title="Our simple admissions process makes it easy to send your child on a journey of excellence"
           buttonText="Fill Admission Form"
           buttonLink="#admissionForm"
         />
@@ -29,41 +67,41 @@ const Admissions = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <div className="container space-y-5">
             <h3 className="text-xl sm:text-2xl font-light">
-            Admission requirements
-          </h3>
+              Admission requirements
+            </h3>
 
-          <hr />
+            <hr />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-            <Req
-              title="Birth certificate"
-              description="A copy of your child's birth certificate"
-            />
-          </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+              <Req
+                title="Birth certificate"
+                description="Copy + Original Birth Certificate in English"
+              />
+              <Req
+                title="Report form/card"
+                description="Copy of report form/card from the previous school or as advised"
+              />
+              <Req
+                title="Transfer form"
+                description="Transfer form or letter from previous school"
+              />
+              <Req
+                title="National ID"
+                description="Copy + Original National ID of the parent or guardian"
+              />
+              <Req
+                title="Leaving certificate"
+                description="A copy of leaving certificate"
+              />
+              <Req
+                title="Personal statement"
+                description="Personal statement"
+              />
+              <Req
+                title="Application form"
+                description="A duly filled application form. (Fill the form below)"
+              />
+            </div>
           </div>
         </Suspense>
 
@@ -92,18 +130,31 @@ const Admissions = () => {
                 Upcoming events
               </h2>
 
-              <div className="w-full overflow-x-auto pb-5">
-                <div className="flex gap-3 w-max">
-                  {events.map((event, i) => (
-                    <AdmissionEvent
-                      key={i}
-                      title={event.title}
-                      date={event.date}
-                      time="10.00 AM - 2.00 PM"
-                    />
-                  ))}
-                </div>
-              </div>
+              <Carousel
+                responsive={responsive}
+                keyBoardControl={true}
+                customTransition="all 0.5s ease-in-out"
+                transitionDuration={500}
+                removeArrowOnDeviceType={["desktop"]}
+                pauseOnHover={true}
+                infinite={true}
+                arrows={true}
+                autoPlay={true}
+                autoPlaySpeed={5000}
+                className="w-full"
+                containerClass="carousel-container"
+                itemClass="carousel-item"
+              >
+                {events.map((event, i) => (
+                  <AdmissionEvent
+                    key={i}
+                    title={event.title}
+                    date={event.date}
+                    action={event.action}
+                    link={event.link}
+                  />
+                ))}
+              </Carousel>
             </div>
           </div>
         </div>

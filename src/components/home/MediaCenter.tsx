@@ -55,7 +55,7 @@ const MediaCenter = () => {
 
             <div className="w-full space-y-3">
               <div className="space-y-3">
-                <p className="text-black font-bold text-xl sm:text-2xl">
+                <p className="text-primary font-bold text-xl sm:text-2xl">
                   Title of News Items
                 </p>
                 <p className="text-sm text-neutral-dark">

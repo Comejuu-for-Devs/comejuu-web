@@ -1,5 +1,6 @@
 "use client";
 
+import { StaticImageData } from "next/image";
 import React, { Suspense, lazy } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 import Carousel from "react-multi-carousel";
@@ -9,7 +10,7 @@ export interface ValueSlide {
   title: string;
   description: string;
   longDescription: string;
-  image: string;
+  image: StaticImageData;
 }
 
 interface ValueCarouselProps {
@@ -66,7 +67,7 @@ const ValueCarousel: React.FC<ValueCarouselProps> = ({
     previous,
   }) => {
     return (
-      <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center w-full px-5 md:px-10 md:justify-between md:bottom-10">
+      <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center w-full px-5 md:px-10 md:justify-between md:bottom-14">
         <button
           onClick={() => previous?.()}
           className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center border
@@ -102,13 +103,13 @@ const ValueCarousel: React.FC<ValueCarouselProps> = ({
           renderButtonGroupOutside={true}
           customButtonGroup={<CustomButtonGroup />}
           autoPlay={true}
-          autoPlaySpeed={10000}
+          autoPlaySpeed={5000}
           className="w-full h-full"
           containerClass="carousel-container h-full"
           itemClass="carousel-item h-full"
         >
           {values.map((value, index) => (
-            <Suspense fallback={<div>Loading...</div>} key={index}>
+            <Suspense fallback={<div></div>} key={index}>
               <ValueSlide value={value} index={index} />
             </Suspense>
           ))}

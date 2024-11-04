@@ -1,16 +1,21 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 type StudentLifeCardProps = {
-  title: string
-  img: string
-  link: string
-  linkTitle: string
-}
+  title: string;
+  img: StaticImageData;
+  link: string;
+  linkTitle: string;
+};
 
-export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({ title, img, link, linkTitle }) => {
+export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({
+  title,
+  img,
+  link,
+  linkTitle,
+}) => {
   return (
     <div className="w-full text-white space-y-4 ">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
@@ -19,7 +24,7 @@ export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({ title, img, li
           alt={title}
           layout="fill"
           objectFit="cover"
-          className="transition-transform duration-300 hover:scale-110"
+          className="transition-transform duration-300 hover:scale-110 cursor-pointer"
         />
       </div>
       <h3 className="text-xl text-primary font-semibold">{title}</h3>
@@ -34,4 +39,4 @@ export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({ title, img, li
       </Link>
     </div>
   );
-}
+};

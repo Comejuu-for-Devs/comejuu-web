@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
 type GhostLineProps = {
-  styles?: string
-}
+  styles?: string;
+};
 
-const GhostLine = ({
-  styles
-}: GhostLineProps) => {
+const GhostLine = ({ styles }: GhostLineProps) => {
   return (
-    <div className={`h-px bg-gradient-to-r from-transparent via-secondary to-transparent w-full ${styles}`} />
-  )
-}
+    <div
+      className={`h-px bg-gradient-to-r from-transparent via-secondary to-transparent w-full ${styles}`}
+    />
+  );
+};
 
-export default GhostLine
+export default GhostLine;

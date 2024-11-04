@@ -1,38 +1,83 @@
-import React from 'react'
-import { RiCircleFill } from 'react-icons/ri'
-import EventCard from '@/components/home/EventCard'
-import { events } from '@/data'
+"use client";
+import React from "react";
+import { RiCircleFill } from "react-icons/ri";
+import EventCard from "@/components/home/EventCard";
+import { events } from "@/data";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const NewsEvents = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1600 },
+      items: 3,
+    },
+    largeDesktop: {
+      breakpoint: { max: 1600, min: 1280 },
+      items: 3,
+    },
+    laptop: {
+      breakpoint: { max: 1280, min: 1024 },
+      items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    largeMobile: {
+      breakpoint: { max: 768, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
-    <section className='py-20'>
+    <section className="py-20">
       <div className="container space-y-10">
         <div className="flex items-center gap-3">
-          <RiCircleFill className='text-tertiary' />
-          <h2 className="text-3xl font-secondary tracking-[-.1px] font-bold text-primary">Events</h2>
+          <RiCircleFill className="text-tertiary" />
+          <h2 className="text-3xl font-secondary tracking-[-.1px] font-bold text-primary">
+            Events
+          </h2>
         </div>
 
         <div className="">
           <h5 className="text-primary text-base font-bold">Upcoming events</h5>
 
-          <hr className='my-5' />
+          <hr className="my-5" />
 
-          <div className="w-full overflow-x-auto pb-5">
-            <div className="flex gap-3 w-max">
-              {events.map((event, i) => (
-                <EventCard
-                  key={i}
-                  title={event.title}
-                  date={event.date}
-                  time='10.00 AM'
-                />
-              ))}
-            </div>
-          </div>
+          <Carousel
+            responsive={responsive}
+            keyBoardControl={true}
+            customTransition="all 0.5s ease-in-out"
+            transitionDuration={500}
+            removeArrowOnDeviceType={["desktop"]}
+            pauseOnHover={true}
+            infinite={true}
+            arrows={true}
+            autoPlay={true}
+            autoPlaySpeed={5000}
+            className="w-full"
+            containerClass="carousel-container"
+            itemClass="carousel-item"
+          >
+            {events.map((event, i) => (
+              <EventCard
+                key={i}
+                title={event.title}
+                date={event.date}
+                action={event.action}
+                link={event.link}
+              />
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default NewsEvents
+export default NewsEvents;

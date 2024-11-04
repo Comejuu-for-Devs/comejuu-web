@@ -1,17 +1,26 @@
-'use client'
-import Image from 'next/image';
-import React from 'react'
-import ApplyNowButton from './ApplyNowButton';
-import { useRouter } from 'next/navigation';
+"use client";
+import Image, { StaticImageData } from "next/image";
+import React from "react";
+import ApplyNowButton from "./ApplyNowButton";
+import { useRouter } from "next/navigation";
 
-const HeroSection = ({ title, buttonLink }: { title: string, buttonText?: string, buttonLink: string }) => {
+const HeroSection = ({
+  title,
+  buttonLink,
+  img,
+}: {
+  title: string;
+  buttonText?: string;
+  buttonLink: string;
+  img: StaticImageData;
+}) => {
   const router = useRouter();
   return (
     <div className="relative w-full h-[60vh]">
       <Image
         width={1920}
         height={1280}
-        src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={img ?? ""}
         alt=""
         className="asbolute w-full h-full object-cover rounded-xl"
       />
@@ -31,6 +40,6 @@ const HeroSection = ({ title, buttonLink }: { title: string, buttonText?: string
       </div>
     </div>
   );
-}
+};
 
-export default HeroSection
+export default HeroSection;

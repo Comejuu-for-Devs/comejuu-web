@@ -1,18 +1,11 @@
-import React from 'react'
+import React from "react";
 
 interface TabSwitchProps extends React.HTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const TabSwitch: React.FC<TabSwitchProps> = ({
-  children,
-  ...props
-}) => {
-  return (
-    <button {...props}>
-      {children}
-    </button>
-  )
-}
+const TabSwitch: React.FC<TabSwitchProps> = ({ children, ...props }) => {
+  return <button {...props}>{children}</button>;
+};
 
-export default TabSwitch
+export default TabSwitch;

@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { useGetWindowWidth } from "@/hooks/useGetWindowWidth";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 // Dynamically import the StageCard component
-const StageCard = dynamic(() => import('@/components/home/StageCard'));
+const StageCard = dynamic(() => import("@/components/home/StageCard"));
 
 const Stages = () => {
   const isMobile = useGetWindowWidth();
