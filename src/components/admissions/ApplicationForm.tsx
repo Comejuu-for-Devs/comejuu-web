@@ -5,7 +5,6 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 import Input from "@/components/Input";
 import Button from "@/components/Button";
-import Textarea from "@/components/Textarea";
 
 const ApplicationForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

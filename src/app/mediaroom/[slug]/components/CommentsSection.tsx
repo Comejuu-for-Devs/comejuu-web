@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const CommentsSection = ({ postId }: { postId: number }) => {
+const CommentsSection = ({  }: { postId: number }) => {
   // Dummy data for comments
   const [comments, setComments] = useState([
     { id: 1, text: "This is a great post!" },

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const LikeButton = ({ postId }: { postId: number }) => {
+const LikeButton = ({ }: { postId: number }) => {
   const [likes, setLikes] = useState(0);
 
   const handleLike = () => {

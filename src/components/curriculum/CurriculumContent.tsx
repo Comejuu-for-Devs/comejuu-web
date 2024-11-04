@@ -17,9 +17,8 @@ import ApplyNowButton from "@/components/ApplyNowButton";
 const CurriculumContent = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-
   useEffect(() => {
-    const section = searchParams.get("section");
+    const section = searchParams?.get("section");
 
     const timeoutId = setTimeout(() => {
       if (section) {
