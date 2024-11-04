@@ -121,7 +121,7 @@ const About = () => {
               of every student.
             </p>
           </div>
-          <div className="ml-5 mr-5 md:ml-10 md:mr-10 space-y-10  pt-10">
+          <div className="container mx-auto flex-col items-center justify-center space-y-10 pt-10">
             <div className=" h-[30vh] md:h-[80vh] w-full relative overflow-hidden">
               <Image
                 className="object-cover rounded-2xl transition-transform duration-300 hover:scale-105 cursor-pointer"
