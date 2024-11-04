@@ -3,20 +3,21 @@ import React from 'react'
 import ErrorMsg from '@/components/ErrorMsg'
 
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  ref?: React.RefObject<HTMLTextAreaElement>,
   err?: string,
   label: string,
   name: string,
   info?: string,
-  placeholder: string,
+  placeholder?: string,
   type?: string,
-  value: string | number,
-  onChange: React.ChangeEventHandler<HTMLTextAreaElement>,
+  value?: string | number,
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>,
   required?: boolean,
   labelStyle?: string
 }
 
 const Textarea = (props: TextareaProps) => {
-  const { err, label, info, value, ...rest } = props
+  const { err, label, info, value, ref, ...rest } = props
 
   return (
     <div className="flex flex-col gap-2">
@@ -27,6 +28,7 @@ const Textarea = (props: TextareaProps) => {
       </label>
 
       <textarea
+        ref={ref}
         className={`px-3 py-2.5 bg-transparent border rounded-lg text-sm md:text-base
         ${err ? 'border-red-500' : 'border-gray-200'}
         !bg-gray-50 `}

@@ -1,6 +1,7 @@
 "use client"
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import HeroSection from '@/components/HeroSection'
+import { useSearchParams } from 'next/dist/client/components/navigation';
 
 // Dynamic imports
 const Dots = React.lazy(() => import('@/components/layout/Dots'));
@@ -8,6 +9,42 @@ const HelpForm = React.lazy(() => import('@/components/admissions/HelpForm'));
 const Map = React.lazy(() => import('@/components/map/Map'));
 
 const Contact = () => {
+  
+  const searchParams = useSearchParams();
+  const event = searchParams?.get('event');
+  const [prepopulatedText, setPrepopulatedText] = useState('');
+
+  useEffect(() => {
+    if (event) {
+      setPrepopulatedText(`Hello, I would like to know more about the ${event} event.`);
+    }
+  }, [event]);
+
+  useEffect(() => {
+    const section = searchParams?.get("section");
+
+    const timeoutId = setTimeout(() => {
+      if (section) {
+        const element = document.getElementById(`${section}-container`);
+        if (element) {
+          // Get any fixed header height
+          const header = document.getElementById(section);
+          const headerHeight = header ? header.offsetHeight : 0;
+          console.log(headerHeight);
+          // Scroll to element with offset
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - 160,
+            behavior: "smooth",
+          });
+        }
+      }
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchParams]);
+
   return (
     <section className="relative min-h-screen pb-20">
       <Suspense fallback={<div>Loading...</div>}>
@@ -66,7 +103,9 @@ const Contact = () => {
             For enquiries, get in touch with us.
           </h2>
           <Suspense fallback={<div>Loading...</div>}>
-            <HelpForm />
+            <div id="contactform-container">
+              <HelpForm prepopulatedText={prepopulatedText} />
+            </div>
           </Suspense>
         </div>
       </div>

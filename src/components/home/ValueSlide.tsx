@@ -1,19 +1,19 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ValueSlideProps {
   value: {
     title: string;
     description: string;
     longDescription: string;
-    image: string;
+    image: StaticImageData;
   };
   index: number;
 }
 
 const ValueSlide: React.FC<ValueSlideProps> = ({ value, index }) => {
   return (
-    <div className="relative h-[85vh] w-full">
+    <div className="relative h-[100vh] w-full">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -28,10 +28,10 @@ const ValueSlide: React.FC<ValueSlideProps> = ({ value, index }) => {
       </div>
 
       <div className="relative h-full flex flex-col justify-end">
-        <div className="container mx-auto px-5 py-10 md:py-20 flex flex-col h-full justify-end">
+        <div className="container mx-auto px-5 pb-40 flex flex-col h-full justify-end">
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row items-start md:items-end gap-5 md:gap-10">
-            <span className="text-6xl sm:text-7xl md:text-8xl font-bold text-white opacity-20">
+            <span className="text-6xl sm:text-7xl md:text-8xl font-bold text-white opacity-40">
               {(index + 1).toString().padStart(2, "0")}
             </span>
 
@@ -40,11 +40,11 @@ const ValueSlide: React.FC<ValueSlideProps> = ({ value, index }) => {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                   {value.title}
                 </h3>
-                <p className="text-sm sm:text-base text-white/70">
+                <p className="text-sm sm:text-base text-white/95">
                   {value.description}
                 </p>
               </div>
-              <p className="text-sm md:text-base text-white/80">
+              <p className="text-sm md:text-base text-white/90">
                 {value.longDescription}
               </p>
             </div>

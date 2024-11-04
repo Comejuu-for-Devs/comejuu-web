@@ -1,20 +1,21 @@
 import ErrorMsg from "@/components/ErrorMsg"
 
 interface InputProps {
+  ref?: React.RefObject<HTMLInputElement>,
   err?: string,
   label: string,
   name: string,
   info?: string,
-  placeholder: string,
+  placeholder?: string,
   type?: string,
-  value: string | number,
-  onChange: React.ChangeEventHandler<HTMLInputElement>,
+  value?: string | number,
+  onChange?: React.ChangeEventHandler<HTMLInputElement>,
   required?: boolean,
   labelStyle?: string
 }
 
 const Input = (props: InputProps) => {
-  const { err, label, info, ...rest } = props
+  const { err, label, info, ref, ...rest } = props
 
   return (
     <div className="flex flex-col gap-2">
@@ -25,6 +26,7 @@ const Input = (props: InputProps) => {
       </label>
 
       <input
+        ref={ref}
         className={`px-3 py-2.5 bg-transparent border rounded-lg text-sm md:text-base
         ${err ? 'border-red-500' : 'border-gray-200'}
         !bg-gray-50 `}

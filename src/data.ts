@@ -1,3 +1,10 @@
+import CurriculumImage from "../public/images/curriculum/curriculum.jpg";
+import AcademicExcellence from "../public/images/curriculum/academic_excellence.jpg";
+import ModernFacilities from "../public/images/curriculum/modern_facilities.jpg";
+import PracticalAgriculture from "../public/images/curriculum/practical_agriculture.jpg";
+import HolisticDevelopment from "../public/images/curriculum/holistic_development.jpg";
+import EducationalOutings from "../public/images/curriculum/educational_outings.jpg";
+import SafeEnvironment from "../public/images/curriculum/supportive_environment.jpg";
 export const activities = [
   {
     name: 'Netball',
@@ -27,20 +34,28 @@ export const activities = [
 
 export const events = [
   {
-    title: 'School cultural day',
-    date: '22 September 2024',
+    title: 'School Opening Day',
+    date: '07 January 2025',
+    action: 'Find Out More',
+    link: '/contact?section=contactform&event=School Opening Day'
   },
   {
-    title: 'School cultural day',
-    date: '22 September 2024',
+    title: 'Mid-Term Exams',
+    date: '29 January 2025',
+    action: 'Find Out More',
+    link: '/contact?section=contactform&event=Mid-Term Exams'
   },
   {
-    title: 'School cultural day',
-    date: '22 September 2024',
+    title: 'Parents Visiting Day',
+    date: '23 February 2025',
+    action: 'Find Out More',
+    link: '/contact?section=contactform&event=Parents Visiting Day'
   },
   {
-    title: 'School cultural day',
-    date: '22 September 2024',
+    title: 'Interschool Talents Day',
+    date: '03 March 2025',
+    action: 'Find Out More',
+    link: '/contact?section=contactform&event=Interschool Talents Day'
   },
 ]
 
@@ -126,7 +141,7 @@ export const excellenceBeyondClassroomItems = [
       that helps them discover their talents, build teamwork skills, develop a love for learning,
       and have a blast! 
     `,
-    image: ''
+    image: HolisticDevelopment
   },
   {
     title: 'Educational Outings & Trips',
@@ -135,7 +150,7 @@ export const excellenceBeyondClassroomItems = [
       for our students to explore the world beyond the classroom through educational outings
       and trips in every school term. 
     `,
-    image: ''
+    image: EducationalOutings
   },
   {
     title: 'A Safe and Supportive Environment',
@@ -148,7 +163,7 @@ export const excellenceBeyondClassroomItems = [
       Township, within walking distance from a level 4 hospital, police station and market for
       easy access.
     `,
-    image: ''
+    image: SafeEnvironment
   },
   {
     title: 'A Strong Community Spirit',
@@ -157,7 +172,7 @@ export const excellenceBeyondClassroomItems = [
       teachers, and students work together to create a supportive and enriching learning
       experience.
     `,
-    image: ''
+    image: PracticalAgriculture
   },
 ]
 
@@ -170,7 +185,7 @@ export const approaches = [
       school (grades 4-6) and junior secondary (grades 7-9) with day
       and boarding options
     `,
-    image: ''
+    image: CurriculumImage
   },
   {
     title: 'Academic Excellence',
@@ -182,7 +197,7 @@ export const approaches = [
       Competency-Based Curriculum (C.B.C.) with a focus on critical
       thinking, problem-solving, creativity and real-world application.
     `,
-    image: ''
+    image: AcademicExcellence
   },
   {
     title: 'Modern Facilities',
@@ -194,6 +209,6 @@ export const approaches = [
       equip our students with the knowledge and skills they need to
       succeed in the 21st century.
     `,
-    image: ''
+    image: ModernFacilities
   },
 ]
