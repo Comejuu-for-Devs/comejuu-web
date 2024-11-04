@@ -12,7 +12,7 @@ const HeroSection = ({
   title: string;
   buttonText?: string;
   buttonLink: string;
-  img: StaticImageData;
+  img?: StaticImageData;
 }) => {
   const router = useRouter();
   return (
