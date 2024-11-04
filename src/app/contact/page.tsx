@@ -2,7 +2,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import { useSearchParams } from "next/dist/client/components/navigation";
-import Image from "next/image";
 import ContactImage from "../../../public/images/curriculum/curriculum.jpg";
 // Dynamic imports
 const Dots = React.lazy(() => import("@/components/layout/Dots"));

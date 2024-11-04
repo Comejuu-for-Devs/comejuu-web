@@ -1,5 +1,5 @@
 "use client";
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import "react-multi-carousel/lib/styles.css";
 import Academic_Excellence from "../../../public/images/hero_carousel/academic_excellence.jpg";
 import Curiosity_and_Adventure from "../../../public/images/hero_carousel/curiosity_adventure.jpg";
