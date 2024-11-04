@@ -230,7 +230,8 @@ const CurriculumContent = () => {
             </div>
           </div>
         </div>
-
+        {/* CALL TO ACTION */}
+        <CallToAction />
         {/* EXTRACURRICULAR */}
         <div id="extracurricular-container" className="container space-y-10">
           <div className="space-y-5">
@@ -246,37 +247,8 @@ const CurriculumContent = () => {
             </p>
           </div>
 
-          <div className="overflow-x-auto pb-5">
-            <div className="flex gap-2 w-max">
-              <Image
-                width={1920}
-                height={1280}
-                src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="h-[300px] w-[500px] object-cover rounded-lg"
-              />
-              <Image
-                width={1920}
-                height={1280}
-                src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="h-[300px] w-[500px] object-cover rounded-lg"
-              />
-              <Image
-                width={1920}
-                height={1280}
-                src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="h-[300px] w-[500px] object-cover rounded-lg"
-              />
-            </div>
-          </div>
-
           <CurriculumExcellenceTabs />
         </div>
-
-        {/* CALL TO ACTION */}
-        <CallToAction />
       </div>
     </section>
   );
