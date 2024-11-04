@@ -2,14 +2,14 @@
 import React, { Suspense, useEffect, useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import { useSearchParams } from "next/dist/client/components/navigation";
-import Image from "next/image";
 import ContactImage from "../../../public/images/curriculum/curriculum.jpg";
 // Dynamic imports
 const Dots = React.lazy(() => import("@/components/layout/Dots"));
 const HelpForm = React.lazy(() => import("@/components/admissions/HelpForm"));
 const Map = React.lazy(() => import("@/components/map/Map"));
 
-const Contact = () => {
+// New Component to handle search params
+const SearchParamsHandler = () => {
   const searchParams = useSearchParams();
   const event = searchParams?.get("event");
   const [prepopulatedText, setPrepopulatedText] = useState("");
@@ -47,9 +47,13 @@ const Contact = () => {
     return () => clearTimeout(timeoutId);
   }, [searchParams]);
 
+  return <HelpForm prepopulatedText={prepopulatedText} />;
+};
+
+const Contact = () => {
   return (
     <section className="relative min-h-screen pb-20">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading Dots...</div>}>
         <Dots />
       </Suspense>
 
@@ -105,14 +109,14 @@ const Contact = () => {
           <h2 className="text-xl sm:text-2xl mb-10 font-bold font-secondary">
             For enquiries, get in touch with us.
           </h2>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading Help Form...</div>}>
             <div id="contactform-container">
-              <HelpForm prepopulatedText={prepopulatedText} />
+              <SearchParamsHandler />
             </div>
           </Suspense>
         </div>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading Map...</div>}>
         <Map />
       </Suspense>
     </section>
