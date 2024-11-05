@@ -4,7 +4,6 @@ import ErrorMsg from "@/components/ErrorMsg";
 
 interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  ref?: React.RefObject<HTMLTextAreaElement>;
   err?: string;
   label: string;
   name: string;
@@ -17,8 +16,8 @@ interface TextareaProps
   labelStyle?: string;
 }
 
-const Textarea = (props: TextareaProps) => {
-  const { err, label, info, value, ref, ...rest } = props;
+const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>((props, ref) => {
+  const { err, label, info, value, ...rest } = props;
 
   return (
     <div className="flex flex-col gap-2">
@@ -45,6 +44,8 @@ const Textarea = (props: TextareaProps) => {
       {err && <ErrorMsg msg={err} />}
     </div>
   );
-};
+});
+
+Textarea.displayName = "Textarea";
 
 export default Textarea;

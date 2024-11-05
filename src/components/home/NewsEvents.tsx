@@ -40,15 +40,11 @@ const NewsEvents = () => {
         <div className="flex items-center gap-3">
           <RiCircleFill className="text-tertiary" />
           <h2 className="text-3xl font-secondary tracking-[-.1px] font-bold text-primary">
-            Events
+            Upcoming Events
           </h2>
         </div>
 
         <div className="">
-          <h5 className="text-primary text-base font-bold">Upcoming events</h5>
-
-          <hr className="my-5" />
-
           <Carousel
             responsive={responsive}
             keyBoardControl={true}
@@ -62,7 +58,7 @@ const NewsEvents = () => {
             autoPlaySpeed={5000}
             className="w-full"
             containerClass="carousel-container"
-            itemClass="carousel-item"
+            itemClass="carousel-item ml-1 md:ml-0"
           >
             {events.map((event, i) => (
               <EventCard

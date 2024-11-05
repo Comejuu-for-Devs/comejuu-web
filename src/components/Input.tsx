@@ -1,7 +1,7 @@
+import React from "react";
 import ErrorMsg from "@/components/ErrorMsg";
 
 interface InputProps {
-  ref?: React.RefObject<HTMLInputElement>;
   err?: string;
   label: string;
   name: string;
@@ -14,8 +14,8 @@ interface InputProps {
   labelStyle?: string;
 }
 
-const Input = (props: InputProps) => {
-  const { err, label, info, ref, ...rest } = props;
+const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const { err, label, info, ...rest } = props;
 
   return (
     <div className="flex flex-col gap-2">
@@ -41,6 +41,8 @@ const Input = (props: InputProps) => {
       {err && <ErrorMsg msg={err} />}
     </div>
   );
-};
+});
+
+Input.displayName = "Input";
 
 export default Input;

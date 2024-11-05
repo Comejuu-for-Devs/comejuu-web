@@ -8,7 +8,6 @@ import "react-multi-carousel/lib/styles.css";
 
 export interface ValueSlide {
   title: string;
-  description: string;
   longDescription: string;
   image: StaticImageData;
 }
@@ -32,7 +31,7 @@ const ValueSlide = lazy(() => import("./ValueSlide"));
 
 const ValueCarousel: React.FC<ValueCarouselProps> = ({
   values,
-  height = "h-[85vh]",
+  height = "h-[89vh]",
   className = "",
 }) => {
   const responsive = {

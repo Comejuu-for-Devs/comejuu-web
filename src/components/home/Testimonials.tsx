@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { RiCircleFill } from "react-icons/ri";
+import CallToAction from "../CallToAction";
 
 // Use dynamic imports for components
 const TestimonialCard = dynamic(
@@ -70,7 +71,7 @@ const Testimonials = () => {
           responsive={responsive}
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={5000}
+          autoPlaySpeed={8000}
           keyBoardControl={true}
           customTransition="all .5s"
           transitionDuration={500}
@@ -78,7 +79,7 @@ const Testimonials = () => {
           containerClass="carousel-container"
           removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
-          itemClass=" py-2"
+          itemClass="ml-1 md:ml-0"
         >
           {testimonials.map((t, i) => (
             <div key={i} className="h-full cursor-pointer">
@@ -91,6 +92,11 @@ const Testimonials = () => {
           ))}
         </Carousel>
       </div>
+      <Suspense fallback={<div>Loading Call to Action...</div>}>
+        <div className="pt-10 m-5">
+          <CallToAction />
+        </div>
+      </Suspense>
     </section>
   );
 };

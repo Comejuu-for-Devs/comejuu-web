@@ -9,7 +9,7 @@ const CallToAction = () => {
         className="font-secondary text-xl md:text-3xl w-full sm:w-2/3 font-bold tracking-tight
       text-primary mb-8"
       >
-        2025 Intake in Progress. Apply Now!
+        2025 Intake in Progress.
       </h2>
 
       <Link href={"/admissions#admissionForm"}>

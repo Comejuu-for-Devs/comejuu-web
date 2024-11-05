@@ -248,8 +248,6 @@ const CurriculumContent = () => {
             </div>
           </div>
         </div>
-        {/* CALL TO ACTION */}
-        <CallToAction />
         {/* EXTRACURRICULAR */}
         <div id="extracurricular-container" className="container space-y-10">
           <div className="space-y-5">
@@ -267,6 +265,9 @@ const CurriculumContent = () => {
 
           <CurriculumExcellenceTabs />
         </div>
+        {/* CALL TO ACTION */}
+        <div className="m-5"></div>
+        <CallToAction />
       </div>
     </section>
   );
