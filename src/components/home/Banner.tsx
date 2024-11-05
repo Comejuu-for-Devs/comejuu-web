@@ -16,7 +16,7 @@ const Banner = () => {
       <div className="md:container md:mx-auto flex sm:flex-row items-center justify-between gap-2 md:gap-10 px-2">
         <div className="space-y-4 max-w-2xl text-center sm:text-left">
           <h1 className="font-secondary text-left text-xs md:text-lg lg:text-2xl tracking-normal">
-            Welcome to a CBC school where dreams spread their wings and land on
+            Welcome to a CBC school where dreams spread their wings and fly to
             success
           </h1>
         </div>

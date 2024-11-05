@@ -98,9 +98,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        <Suspense fallback={<div>Loading Call to Action...</div>}>
-          <CallToAction />
-        </Suspense>
         {/* OUR STAFF */}
         <div className="bg-primary py-16">
           {/* LOREM IPSUM SECTION */}
@@ -139,6 +136,9 @@ const About = () => {
                 })}
               </Suspense>
             </div>
+            <Suspense fallback={<div>Loading Call to Action...</div>}>
+              <CallToAction />
+            </Suspense>
           </div>
         </div>
 

@@ -21,7 +21,7 @@ const StaffCard = ({ name, img, role, description }: StaffCardProps) => {
 
       <div>
         <h1 className="text-lg font-semibold text-white">{name}</h1>
-        <p className="text-sm text-tertiary font-normal">{role}</p>
+        <p className="text-sm pl-5 text-tertiary font-normal">{role}</p>
         {description && (
           <p className="text-sm text-gray-300 font-normal">{description}</p>
         )}

@@ -16,7 +16,6 @@ const ApplicationForm = () => {
       <Input
         label="Your name *"
         placeholder="e.g. John Doe"
-        value={""}
         onChange={() => {}}
         name="parentName"
       />
@@ -24,7 +23,6 @@ const ApplicationForm = () => {
       <Input
         label="The student's name *"
         placeholder="e.g. John Doe"
-        value={""}
         onChange={() => {}}
         name="studentName"
       />
@@ -32,7 +30,6 @@ const ApplicationForm = () => {
       <Input
         label="The student's current grade *"
         placeholder="e.g. 1"
-        value={""}
         onChange={() => {}}
         name="grade"
       />
@@ -40,7 +37,6 @@ const ApplicationForm = () => {
       <Input
         label="Day school or boarding"
         placeholder="e.g. Boarding"
-        value={""}
         onChange={() => {}}
         name="dayOrBoarding"
       />
@@ -48,7 +44,6 @@ const ApplicationForm = () => {
       <Input
         label="Your relationship to the student (Parent, guardian, sibling, donor)"
         placeholder="e.g. Boarding"
-        value={""}
         onChange={() => {}}
         name="dayOrBoarding"
       />
@@ -56,7 +51,6 @@ const ApplicationForm = () => {
       <Input
         label="Your phone number *"
         placeholder="e.g. 07XXXXXXXX"
-        value={""}
         onChange={() => {}}
         name="phone"
       />
@@ -64,7 +58,6 @@ const ApplicationForm = () => {
       <Input
         label="Your email"
         placeholder="e.g. johndoe@email.com"
-        value={""}
         onChange={() => {}}
         name="email"
       />

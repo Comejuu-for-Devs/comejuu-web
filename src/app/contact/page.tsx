@@ -69,7 +69,7 @@ const Contact = () => {
         <div className="container grid grid-cols-1 sm:grid-cols-2 gap-10">
           <div className="space-y-5">
             <h2 className="text-xl sm:text-2xl font-bold font-secondary">
-              Contact - Talk to us
+              Contacts - Talk to us
             </h2>
 
             <div className="">

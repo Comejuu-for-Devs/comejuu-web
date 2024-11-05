@@ -14,7 +14,7 @@ const Map = () => {
       <h2 className="text-2xl font-bold mb-4">Come Visit Us At Our Campus</h2>
       <div className="w-full h-96">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "YOUR_API_KEY" }}
+          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY || '' }}
           defaultCenter={location}
           defaultZoom={17}
         >
