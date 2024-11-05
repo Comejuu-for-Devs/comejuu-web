@@ -79,7 +79,7 @@ const Testimonials = () => {
           containerClass="carousel-container"
           removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
-          itemClass="ml-1 md:ml-0"
+          itemClass="ml-[20px] md:ml-0"
         >
           {testimonials.map((t, i) => (
             <div key={i} className="h-full cursor-pointer">

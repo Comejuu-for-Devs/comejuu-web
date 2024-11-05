@@ -18,11 +18,7 @@ const Map = () => {
           defaultCenter={location}
           defaultZoom={17}
         >
-          <LocationPin
-            // lat={location.lat}
-            // lng={location.lng}
-            text={location.address}
-          />
+          
         </GoogleMapReact>
       </div>
     </div>
