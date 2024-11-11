@@ -51,14 +51,14 @@ const NewsEvents = () => {
             customTransition="all 0.5s ease-in-out"
             transitionDuration={500}
             removeArrowOnDeviceType={["desktop"]}
-            pauseOnHover={true}
             infinite={true}
+            pauseOnHover={false}
             arrows={true}
             autoPlay={true}
             autoPlaySpeed={5000}
             className="w-full"
             containerClass="carousel-container"
-            itemClass="carousel-item ml-1 md:ml-0"
+            itemClass="carousel-item ml-[22px] md:ml-0"
           >
             {events.map((event, i) => (
               <EventCard
