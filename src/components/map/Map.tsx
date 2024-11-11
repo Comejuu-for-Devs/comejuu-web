@@ -1,6 +1,5 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import LocationPin from "./components/LocationPin";
 
 const Map = () => {
   const location = {
@@ -14,12 +13,10 @@ const Map = () => {
       <h2 className="text-2xl font-bold mb-4">Come Visit Us At Our Campus</h2>
       <div className="w-full h-96">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY || '' }}
+          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY || "" }}
           defaultCenter={location}
           defaultZoom={17}
-        >
-          
-        </GoogleMapReact>
+        ></GoogleMapReact>
       </div>
     </div>
   );

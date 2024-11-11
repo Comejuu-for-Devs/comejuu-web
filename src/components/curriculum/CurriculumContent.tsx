@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react";
 import {useSearchParams } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 
 import Button from "@/components/Button";
@@ -12,10 +11,11 @@ import CallToAction from "@/components/CallToAction";
 import CurriculumExcellenceTabs from "@/components/curriculum/CurriculumTabs";
 import ApproachTabs from "@/components/curriculum/ApproachTabs";
 import AgricultureHarvest from "../../../public/images/curriculum/agriculture_harvest.jpg";
-import PreSchool from "../../../public/images/curriculum/pre_school.jpg";
-import PrimarySchool from "../../../public/images/curriculum/primary_school.jpg";
-import JuniorSecondary from "../../../public/images/curriculum/junior_secondary.jpg";
 import HeroSection from "../HeroSection";
+import CurriculumCorousel from "./CurriculumCorousel";
+import { juniorSecondaryImages, preSchoolImages, primarySchoolImages } from "@/data";
+
+
 
 const CurriculumContent = () => {
   const searchParams = useSearchParams();
@@ -76,13 +76,13 @@ const CurriculumContent = () => {
         </div>
 
         {/* STAGES */}
-        <div className="mx-2 md:mx-20 space-y-16">
+        <div className="container mx-auto space-y-16">
           {/* PRE-SCHOOL */}
           <div
             id="pre-school-container"
-            className="md:container bg-primary rounded-2xl py-4 md:py-12"
+            className="md:container bg-primary rounded-xl md:rounded-2xl py-4 md:py-12"
           >
-            <div id="pre-school" className="container space-y-10">
+            <div id="pre-school" className="container md:space-y-10">
               <div className="space-y-5">
                 <h2
                   className="font-secondary text-3xl sm:text-4xl w-full sm:w-1/2 font-bold tracking-tight
@@ -97,13 +97,7 @@ const CurriculumContent = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <Image
-                  width={1920}
-                  height={1280}
-                  src={PreSchool}
-                  alt=""
-                  className="w-full h-[300px] object-cover"
-                />
+                <CurriculumCorousel values={preSchoolImages} />
 
                 <div className="space-y-5">
                   <p className="text-base sm:text-lg font-light w-full text-gray-200">
@@ -153,13 +147,7 @@ const CurriculumContent = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <Image
-                  width={1920}
-                  height={1280}
-                  src={PrimarySchool}
-                  alt=""
-                  className="w-full h-[300px] object-cover"
-                />
+                <CurriculumCorousel values={primarySchoolImages} />
 
                 <div className="space-y-5">
                   <p className="text-base sm:text-lg font-light w-full text-gray-200">
@@ -210,13 +198,7 @@ const CurriculumContent = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <Image
-                  width={1920}
-                  height={1280}
-                  src={JuniorSecondary}
-                  alt=""
-                  className="w-full h-[300px] object-cover"
-                />
+                <CurriculumCorousel values={juniorSecondaryImages} />
 
                 <div className="space-y-5">
                   <p className="text-base sm:text-lg font-light w-full text-primary">

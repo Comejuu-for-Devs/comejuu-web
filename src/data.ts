@@ -5,6 +5,32 @@ import PracticalAgriculture from "../public/images/curriculum/practical_agricult
 import HolisticDevelopment from "../public/images/curriculum/holistic_development.jpg";
 import EducationalOutings from "../public/images/curriculum/educational_outings.jpg";
 import SafeEnvironment from "../public/images/curriculum/supportive_environment.jpg";
+///////////////////////////pre-school/////////////////////////////////////////
+import PreSchool1 from "../public/images/curriculum/pre/pre1.jpg";
+import PreSchool2 from "../public/images/curriculum/pre/pre2.jpg";
+import PreSchool3 from "../public/images/curriculum/pre/pre3.jpg";
+import PreSchool4 from "../public/images/curriculum/pre/pre4.jpg";
+//////////////////////////primary/////////////////////////////////////////
+import Primary1 from "../public/images/curriculum/primary/primary1.jpg";
+import Primary2 from "../public/images/curriculum/primary/primary2.jpg";
+import Primary3 from "../public/images/curriculum/primary/primary3.jpg";
+import Primary4 from "../public/images/curriculum/primary/primary4.jpg";
+//////////////////////////junior secondary/////////////////////////////////////////
+import JuniorSecondary1 from "../public/images/curriculum/juniorhigh/junior1.jpg";
+import JuniorSecondary2 from "../public/images/curriculum/juniorhigh/junior2.jpg";
+import JuniorSecondary3 from "../public/images/curriculum/juniorhigh/junior3.jpg";
+import JuniorSecondary4 from "../public/images/curriculum/juniorhigh/junior4.jpg";
+import JuniorSecondary5 from "../public/images/curriculum/juniorhigh/junior5.jpg";
+
+export const preSchoolImages = [PreSchool1, PreSchool2, PreSchool3, PreSchool4];
+export const primarySchoolImages = [Primary1, Primary2, Primary3, Primary4];
+export const juniorSecondaryImages = [
+  JuniorSecondary1,
+  JuniorSecondary2,
+  JuniorSecondary3,
+  JuniorSecondary4,
+  JuniorSecondary5,
+];
 export const activities = [
   {
     name: "Netball",

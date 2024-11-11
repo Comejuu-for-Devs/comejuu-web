@@ -7,6 +7,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 import "@/styles/globals.css";
+import FloatingWhatsappButton from "@/components/layout/FloatingWhatsappButton";
+import { Toaster } from "react-hot-toast";
 
 const fontPrimary = FontPrimary({
   subsets: ["latin"],
@@ -93,7 +95,12 @@ export default function RootLayout({
         className={`${fontPrimary.variable} ${fontSecondary.variable} antialiased font-primary`}
       >
         <Navbar />
+        <Toaster />
         {children}
+        <div className="fixed z-50 bottom-10 right-10">
+          <FloatingWhatsappButton />
+        </div>
+
         <Footer />
       </body>
     </html>
