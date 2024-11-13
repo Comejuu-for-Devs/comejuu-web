@@ -77,10 +77,10 @@ const Testimonials = () => {
           transitionDuration={500}
           minimumTouchDrag={100}
           pauseOnHover={false}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
-          itemClass="ml-[9px] md:ml-0"
+          removeArrowOnDeviceType={[]}
+          containerClass="carousel-container flex items-center"
+          itemClass="carousel-item flex justify-center"
         >
           {testimonials.map((t, i) => (
             <div key={i} className="h-full cursor-pointer">

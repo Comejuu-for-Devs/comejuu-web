@@ -12,7 +12,7 @@ type EventCardProps = {
 const EventCard: React.FC<EventCardProps> = ({ title, date, action, link }) => {
   const { day, monthName } = getDate(date);
   return (
-    <div className="p-2 border border-secondary/15 rounded-xl w-[285px] gap-5 flex flex-col">
+    <div className="p-2 border border-secondary/15 rounded-xl w-72 gap-4 flex flex-col">
       <div className="bg-secondary text-white p-3 w-14 min-w-12 rounded-lg">
         <p className="text-lg font-semibold">{day}</p>
         <p className="text-sm uppercase">{monthName}</p>

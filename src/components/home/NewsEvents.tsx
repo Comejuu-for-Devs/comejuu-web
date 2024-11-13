@@ -57,8 +57,8 @@ const NewsEvents = () => {
             autoPlay={true}
             autoPlaySpeed={5000}
             className="w-full"
-            containerClass="carousel-container"
-            itemClass="carousel-item ml-[9px] md:ml-0"
+            containerClass="carousel-container flex items-center"
+            itemClass="carousel-item flex justify-center"
           >
             {events.map((event, i) => (
               <EventCard
