@@ -97,9 +97,9 @@ export default function RootLayout({
         <Navbar />
         <Toaster />
         {children}
-        <div className="fixed z-50 bottom-10 right-10">
+    
           <FloatingWhatsappButton />
-        </div>
+     
 
         <Footer />
       </body>

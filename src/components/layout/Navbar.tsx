@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="absolute h-px w-full bg-gray-900/20 left-0" />
 
         {/* NAV */}
-        <div className="relative z-10 container flex items-center justify-between bg-white">
+        <div className="relative z-50 container flex items-center justify-between bg-white">
           <Link href="/" className="w-max bg-white rounded-xl py-1.5 px-2">
             <Image
               src={logo}

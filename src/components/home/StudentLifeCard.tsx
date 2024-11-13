@@ -1,20 +1,18 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 type StudentLifeCardProps = {
   title: string;
   img: StaticImageData;
   link: string;
-  linkTitle: string;
+  linkTitle?: string;
 };
 
 export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({
   title,
   img,
   link,
-  linkTitle,
 }) => {
   return (
     <div className="w-full text-white space-y-4 ">
@@ -34,8 +32,8 @@ export const StudentLifeCard: React.FC<StudentLifeCardProps> = ({
         scroll={true}
         className="inline-flex items-center underline text-sm font-semibold text-secondary hover:underline"
       >
-        <span>{linkTitle}</span>
-        <HiOutlineArrowNarrowRight className="ml-2" />
+        {/* <span>{linkTitle}</span> */}
+        {/* <HiOutlineArrowNarrowRight className="ml-2" /> */}
       </Link>
     </div>
   );

@@ -1,17 +1,14 @@
 const FloatingWhatsappButton = () => {
   return (
-    <div className="fixed bottom-10 right-10">
+    <div className="fixed bottom-20 z-50 md:bottom-32 right-[90px]">
       <a
-        href="https://wa.me/+254722528623"
+        href="https://wa.me/+254722528623?text=Thank%20you%20for%20contacting%20Comejuu%20Premier%20Academy.%20How%20can%20we%20help%20you%20today?"
         title="Chat with Comejuu school on WhatsApp"
+        className="h-[52px] w-[52px]"
         style={{
           margin: "0 0 20px 0 !important",
-          height: "52px",
-          minWidth: "52px",
           padding: "5px 0px 0px 5px",
           position: "fixed",
-          bottom: "10px",
-          right: "20px",
           zIndex: 999999999,
           backgroundColor: "#00E785",
           boxShadow: "4px 5px 10px rgba(0, 0, 0, 0.4)",

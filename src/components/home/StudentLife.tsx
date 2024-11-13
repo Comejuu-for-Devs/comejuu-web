@@ -9,6 +9,9 @@ import Music from "../../../public/images/student_life/music.jpg";
 import Wholesome_Meals from "../../../public/images/student_life/wholesome_meals.jpg";
 import School_Transport from "../../../public/images/student_life/school_transport.jpg";
 import Board_Games from "../../../public/images/student_life/board_games.jpg";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import Button from "../Button";
+import { useRouter } from "next/navigation";
 const events = [
   {
     title: "Physical Education",
@@ -49,6 +52,7 @@ const events = [
 ];
 
 const StudentLife = () => {
+  const router = useRouter();
   const isMobile = useGetWindowWidth();
   return (
     <section className="bg-tertiary py-10 w-full">
@@ -75,6 +79,17 @@ const StudentLife = () => {
                 />
               </div>
             ))}
+          </div>
+          <div className="flex w-full justify-center items-center text-center">
+            <Button
+              onClick={() =>
+                router.push("/curriculum?section=extracurricular")
+              }
+              className="w-52 h-12 bg-secondary border-none  mt-5  text-primary hover:bg-primary  transition-all duration-300"
+            >
+              <span className="text-white">Learn More</span>
+              <HiOutlineArrowNarrowRight className="ml-2 text-white" />
+            </Button>
           </div>
         </div>
       </div>
