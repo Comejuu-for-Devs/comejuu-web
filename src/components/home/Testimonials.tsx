@@ -8,7 +8,7 @@ import CallToAction from "../CallToAction";
 
 // Use dynamic imports for components
 const TestimonialCard = dynamic(
-  () => import("@/components/home/TestimonialCard"),
+  () => import("@/components/home/TestimonialCard")
 );
 const GhostLine = dynamic(() => import("@/components/GhostLine"));
 
@@ -80,7 +80,7 @@ const Testimonials = () => {
           containerClass="carousel-container"
           removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
-          itemClass="ml-[4px] md:ml-0"
+          itemClass=""
         >
           {testimonials.map((t, i) => (
             <div key={i} className="h-full cursor-pointer">
