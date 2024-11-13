@@ -66,7 +66,7 @@ const ValueCarousel: React.FC<ValueCarouselProps> = ({
     previous,
   }) => {
     return (
-      <div className="absolute bottom-10 left-0 right-0 flex items-center justify-center w-full px-5 md:px-10 md:justify-between md:bottom-14">
+      <div className="absolute left-0 right-0 flex items-center justify-center w-full px-5 md:px-10 md:justify-between bottom-24 md:bottom-14">
         <button
           onClick={() => previous?.()}
           className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center border
