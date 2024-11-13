@@ -27,7 +27,7 @@ const ValueSlide: React.FC<ValueSlideProps> = ({ value, index }) => {
       </div>
 
       <div className="relative h-full flex flex-col justify-end">
-        <div className="container mx-auto px-5 pb-64 md:pb-80 flex flex-col h-full justify-end">
+        <div className="container mx-auto px-5 pb-80 flex flex-col h-full justify-end">
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row items-start md:items-end gap-5 md:gap-10">
             <span className="text-6xl sm:text-7xl md:text-8xl font-bold text-white opacity-40">
