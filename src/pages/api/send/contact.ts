@@ -2,7 +2,7 @@
 import { Resend } from "resend";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const DESTINATION_EMAIL = "admissions@comejuupremieracademy.com";
+const DESTINATION_EMAIL = "info@comejuupremieracademy.com";
 
 export default async function handler(
   req: NextApiRequest,
@@ -15,19 +15,25 @@ export default async function handler(
 
       const emailBody = `My name is ${name} and my phone number is ${phone}.\n\n${message.trim()}`;
 
-      await resend.emails.send({
+      const { data, error } = await resend.emails.send({
         from: email,
         to: DESTINATION_EMAIL,
         subject: "New Contact Request",
         text: emailBody,
       });
 
-      res.status(200).json({ message: "Email sent successfully" });
+      if (data) {
+        return res.status(200).json({ message: "Email sent successfully" });
+      }
+
+      if (error) {
+        return res.status(500).json({ message: "Internal server error" });
+      }
     } else {
       res.status(405).json({ message: "Method not allowed" });
     }
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "Internal server error, please try again" });
   }
 }

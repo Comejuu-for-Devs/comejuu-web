@@ -25,10 +25,10 @@ import JuniorSecondary5 from "../public/images/curriculum/juniorhigh/junior5.jpg
 export const preSchoolImages = [PreSchool1, PreSchool2, PreSchool3, PreSchool4];
 export const primarySchoolImages = [Primary1, Primary2, Primary3, Primary4];
 export const juniorSecondaryImages = [
+  JuniorSecondary4,
   JuniorSecondary1,
   JuniorSecondary2,
   JuniorSecondary3,
-  JuniorSecondary4,
   JuniorSecondary5,
 ];
 export const activities = [

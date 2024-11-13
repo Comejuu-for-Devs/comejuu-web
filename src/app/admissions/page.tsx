@@ -12,13 +12,13 @@ import HeroSection from "@/components/HeroSection";
 const Button = React.lazy(() => import("@/components/Button"));
 const Req = React.lazy(() => import("@/components/admissions/Req"));
 const AdmissionEvent = React.lazy(
-  () => import("@/components/admissions/AdmissionEvent"),
+  () => import("@/components/admissions/AdmissionEvent")
 );
 const ApplicationForm = React.lazy(
-  () => import("@/components/admissions/ApplicationForm"),
+  () => import("@/components/admissions/ApplicationForm")
 );
 const AdmissionStepsTab = React.lazy(
-  () => import("@/components/admissions/AdmissionStepsTab"),
+  () => import("@/components/admissions/AdmissionStepsTab")
 );
 import SchoolFront from "../../../public/images/admissions/school_front.jpg";
 
@@ -180,7 +180,7 @@ const Admissions = () => {
               className="font-secondary text-3xl sm:text-4xl w-full font-bold tracking-tight
             text-white"
             >
-              Find out more about Comejuu
+              Find out more about Comejuu Premier Academy
             </h2>
 
             <Link

@@ -64,7 +64,7 @@ const About = () => {
                   Dear Parents and Guardians,
                 </p>
                 <p className="text-base sm:text-lg font-light w-full text-gray-500">
-                  Thank you for your interest in Comejuu Premier Academy. We
+                  Thank you for your interest in Comejuu Premier Academy. We are
                   proud to have nurtured countless alumni who have gone on to
                   achieve remarkable success in various fields, embodying the
                   skills and values instilled during their time with us. Our
@@ -105,6 +105,16 @@ const About = () => {
             <h2 className="text-white text-2xl sm:text-3xl font-bold">
               Our Staff
             </h2>
+            <div className="items-center justify-center space-y-10 pt-5">
+              <div className="h-[30vh] md:h-[80vh] w-full relative overflow-hidden">
+                <Image
+                  className="object-cover rounded-2xl transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  src={TeacherStaff}
+                  alt="Teaching Staff"
+                  layout="fill"
+                />
+              </div>
+            </div>
             <p className="text-base mt-5 sm:text-lg font-light text-gray-500">
               We are proud to have a dedicated team of both teaching and
               non-teaching staff, who are committed to fostering a nurturing and
@@ -119,14 +129,6 @@ const About = () => {
             </p>
           </div>
           <div className="container mx-auto flex-col items-center justify-center space-y-10 pt-10">
-            <div className=" h-[30vh] md:h-[80vh] w-full relative overflow-hidden">
-              <Image
-                className="object-cover rounded-2xl transition-transform duration-300 hover:scale-105 cursor-pointer"
-                src={TeacherStaff}
-                alt="Teaching Staff"
-                layout="fill"
-              />
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <Suspense fallback={<div>Loading Staff...</div>}>
                 {staffDetails.map((staff, index) => {

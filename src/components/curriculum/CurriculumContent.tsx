@@ -3,7 +3,6 @@
 import React, { useEffect } from "react";
 import {useSearchParams } from "next/navigation";
 import Link from "next/link";
-
 import Button from "@/components/Button";
 // import Stage from '@/components/curriculum/Stage'
 import Dots from "@/components/layout/Dots";
@@ -14,8 +13,6 @@ import AgricultureHarvest from "../../../public/images/curriculum/agriculture_ha
 import HeroSection from "../HeroSection";
 import CurriculumCorousel from "./CurriculumCorousel";
 import { juniorSecondaryImages, preSchoolImages, primarySchoolImages } from "@/data";
-
-
 
 const CurriculumContent = () => {
   const searchParams = useSearchParams();
@@ -34,7 +31,7 @@ const CurriculumContent = () => {
           const elementPosition =
             element.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({
-            top: elementPosition - 100,
+            top: elementPosition + 100,
             behavior: "smooth",
           });
         }
