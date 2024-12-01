@@ -7,6 +7,7 @@ type ValueCardProps = {
   idx: number;
 };
 
+
 const ValueCard: React.FC<ValueCardProps> = ({ name, description, idx }) => {
   return (
     <div className="relative h-full w-full overflow-hidden">
