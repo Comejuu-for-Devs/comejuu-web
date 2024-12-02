@@ -19,6 +19,7 @@ export default async function handler(
       const { data, error } = await resend.emails.send({
         from: FROM_EMAIL,
         to: DESTINATION_EMAIL,
+        replyTo: email,
         subject: "New Contact Request",
         text: emailBody,
       });

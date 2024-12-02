@@ -29,6 +29,7 @@ export default async function handler(
       const { data, error } = await resend.emails.send({
         from: FROM_EMAIL,
         to: DESTINATION_EMAIL,
+        replyTo: parentEmailAddress,
         subject: "New Admission Request",
         text: emailText.trim(),
       });
