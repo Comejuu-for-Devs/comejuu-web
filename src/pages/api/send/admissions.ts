@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const DESTINATION_EMAIL = "admissions@comejuupremieracademy.com";
-
+const FROM_EMAIL = "admissionspage@comejuupremieracademy.com";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -27,7 +27,7 @@ export default async function handler(
       `;
 
       const { data, error } = await resend.emails.send({
-        from: parentEmailAddress,
+        from: FROM_EMAIL,
         to: DESTINATION_EMAIL,
         subject: "New Admission Request",
         text: emailText.trim(),

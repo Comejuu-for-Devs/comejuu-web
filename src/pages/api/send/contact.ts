@@ -3,6 +3,7 @@ import { Resend } from "resend";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const DESTINATION_EMAIL = "info@comejuupremieracademy.com";
+const FROM_EMAIL = "contactsuspage@comejuupremieracademy.com";
 
 export default async function handler(
   req: NextApiRequest,
@@ -13,10 +14,10 @@ export default async function handler(
     if (req.method === "POST") {
       const { name, phone, email, message } = req.body;
 
-      const emailBody = `My name is ${name} and my phone number is ${phone}.\n\n${message.trim()}`;
+      const emailBody = `Hello Comejuu Premier Academy, My name is ${name}, my phone number is ${phone}, my email is ${email}.\n\n${message.trim()}`;
 
       const { data, error } = await resend.emails.send({
-        from: email,
+        from: FROM_EMAIL,
         to: DESTINATION_EMAIL,
         subject: "New Contact Request",
         text: emailBody,
